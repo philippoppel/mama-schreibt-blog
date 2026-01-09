@@ -1291,16 +1291,9 @@ Du kannst Absaetze durch Leerzeilen trennen." required></textarea>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <script>
-    // ============================================
-    // SUPABASE KONFIGURATION
-    // ============================================
-    // WICHTIG: Ersetze diese Werte mit deinen Supabase Credentials!
-    // Du findest sie unter: supabase.com > Dein Projekt > Settings > API
-
-    const SUPABASE_URL = 'DEINE_SUPABASE_URL';  // z.B. https://xyz.supabase.co
-    const SUPABASE_ANON_KEY = 'DEIN_ANON_KEY';  // Der "anon public" Key
-
-    // ============================================
+    // Supabase Konfiguration
+    const SUPABASE_URL = 'https://aygsockcaepagzxzbrcx.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5Z3NvY2tjYWVwYWd6eHpicmN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5ODU2MzAsImV4cCI6MjA4MzU2MTYzMH0.s7t8a_12OAqh4NDvIk6WoiWyOKPXwZ6EXY_Q53fDtNk';
 
     let supabase;
     let currentUser = null;
@@ -1309,12 +1302,6 @@ Du kannst Absaetze durch Leerzeilen trennen." required></textarea>
 
     // Initialize
     document.addEventListener('DOMContentLoaded', async () => {
-      // Check if Supabase is configured
-      if (SUPABASE_URL === 'DEINE_SUPABASE_URL') {
-        showConfigWarning();
-        return;
-      }
-
       // Initialize Supabase
       supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -1341,24 +1328,6 @@ Du kannst Absaetze durch Leerzeilen trennen." required></textarea>
       // Setup event listeners
       setupEventListeners();
     });
-
-    function showConfigWarning() {
-      document.getElementById('blogGrid').innerHTML = `
-        <div style="grid-column: 1/-1; text-align: center; padding: 40px; background: var(--blush); border-radius: var(--radius-md);">
-          <h3 style="margin-bottom: 16px;">Supabase noch nicht konfiguriert</h3>
-          <p style="color: var(--taupe); margin-bottom: 20px;">
-            Oeffne die index.html und ersetze SUPABASE_URL und SUPABASE_ANON_KEY mit deinen Werten.
-          </p>
-          <p style="font-size: 14px; color: var(--taupe);">
-            1. Gehe zu <a href="https://supabase.com" target="_blank" style="color: var(--rosa-dark);">supabase.com</a><br>
-            2. Erstelle ein neues Projekt<br>
-            3. Fuehre die setup.sql aus (SQL Editor)<br>
-            4. Kopiere URL und anon key (Settings > API)
-          </p>
-        </div>
-      `;
-      document.getElementById('featuredCard').innerHTML = '';
-    }
 
     async function loadPosts() {
       try {
