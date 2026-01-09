@@ -7,18 +7,13 @@
   <meta name="description" content="Hi, ich bin Babsi! Hier teile ich meine ehrlichen Erfahrungen als Mama - von Langzeitstillen bis Familienalltag. Lass mich dir helfen, meine Fehler zu vermeiden.">
   <link rel="canonical" href="https://mama-schreibt-blog.com/">
   <meta name="robots" content="index, follow">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Babsi - Mama schreibt Blog">
   <meta property="og:description" content="Ehrliche Tipps von Mama zu Mama. Stillen, Familie, Baby-Alltag und alles was dazugehoert.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mama-schreibt-blog.com/">
   <meta property="og:locale" content="de_DE">
-
-  <!-- Theme -->
   <meta name="theme-color" content="#e8a0a8">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -34,6 +29,8 @@
       --taupe: #8b7d75;
       --charcoal: #3d3632;
       --white: #ffffff;
+      --success: #6ab894;
+      --error: #d4878f;
       --shadow-sm: 0 2px 8px rgba(61, 54, 50, 0.06);
       --shadow-md: 0 4px 20px rgba(61, 54, 50, 0.08);
       --shadow-lg: 0 8px 30px rgba(61, 54, 50, 0.12);
@@ -42,15 +39,8 @@
       --radius-lg: 28px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: "Nunito", -apple-system, sans-serif;
@@ -67,19 +57,8 @@
       color: var(--charcoal);
     }
 
-    .script {
-      font-family: "Dancing Script", cursive;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
     .container {
       max-width: 1140px;
@@ -87,15 +66,9 @@
       padding: 0 24px;
     }
 
-    /* Schleife SVG */
-    .bow {
-      display: inline-block;
-    }
-
-    .bow svg {
-      width: 100%;
-      height: 100%;
-    }
+    /* Bow SVG */
+    .bow { display: inline-block; }
+    .bow svg { width: 100%; height: 100%; }
 
     /* Header */
     .header {
@@ -120,11 +93,7 @@
       gap: 2px;
     }
 
-    .logo-bow {
-      width: 32px;
-      height: 20px;
-      margin-bottom: -4px;
-    }
+    .logo-bow { width: 32px; height: 20px; margin-bottom: -4px; }
 
     .logo-name {
       font-family: "Dancing Script", cursive;
@@ -153,27 +122,9 @@
       font-weight: 500;
       color: var(--taupe);
       transition: color 0.3s ease;
-      position: relative;
     }
 
-    .nav a:hover {
-      color: var(--rosa-dark);
-    }
-
-    .nav a::after {
-      content: "";
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--rosa);
-      transition: width 0.3s ease;
-    }
-
-    .nav a:hover::after {
-      width: 100%;
-    }
+    .nav a:hover { color: var(--rosa-dark); }
 
     .btn {
       display: inline-flex;
@@ -187,6 +138,7 @@
       transition: all 0.3s ease;
       border: none;
       cursor: pointer;
+      font-family: inherit;
     }
 
     .btn-primary {
@@ -222,6 +174,21 @@
       color: var(--white);
     }
 
+    .btn-small {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: var(--white);
+    }
+
+    .btn-danger {
+      background: var(--error);
+      color: var(--white);
+    }
+
     /* Hero */
     .hero {
       padding: 80px 0 60px;
@@ -250,9 +217,7 @@
       z-index: 1;
     }
 
-    .hero-content {
-      max-width: 520px;
-    }
+    .hero-content { max-width: 520px; }
 
     .hero-greeting {
       font-family: "Dancing Script", cursive;
@@ -274,9 +239,7 @@
       line-height: 1.8;
     }
 
-    .hero-text strong {
-      color: var(--charcoal);
-    }
+    .hero-text strong { color: var(--charcoal); }
 
     .hero-cta {
       display: flex;
@@ -285,9 +248,7 @@
       flex-wrap: wrap;
     }
 
-    .hero-image {
-      position: relative;
-    }
+    .hero-image { position: relative; }
 
     .hero-image img {
       border-radius: var(--radius-lg);
@@ -322,7 +283,7 @@
       margin-bottom: 4px;
     }
 
-    /* Section Divider with Bow */
+    /* Section Divider */
     .section-divider {
       display: flex;
       align-items: center;
@@ -343,7 +304,7 @@
       margin: 0 20px;
     }
 
-    /* About Section */
+    /* About */
     .about {
       padding: 60px 0 80px;
       background: var(--white);
@@ -356,9 +317,7 @@
       align-items: center;
     }
 
-    .about-image {
-      position: relative;
-    }
+    .about-image { position: relative; }
 
     .about-image img {
       border-radius: var(--radius-lg);
@@ -394,7 +353,7 @@
       margin-top: 24px;
     }
 
-    /* Topics Section */
+    /* Topics */
     .topics {
       padding: 80px 0;
       background: var(--cream);
@@ -428,7 +387,7 @@
       text-align: center;
       transition: all 0.3s ease;
       border: 1px solid transparent;
-      position: relative;
+      cursor: pointer;
     }
 
     .topic-card:hover {
@@ -437,18 +396,9 @@
       border-color: var(--rosa);
     }
 
-    .topic-card-bow {
-      position: absolute;
-      top: -10px;
-      right: 20px;
-      width: 28px;
-      height: 18px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .topic-card:hover .topic-card-bow {
-      opacity: 1;
+    .topic-card.active {
+      border-color: var(--rosa);
+      background: var(--blush);
     }
 
     .topic-icon {
@@ -466,7 +416,7 @@
       color: var(--taupe);
     }
 
-    /* Blog Section */
+    /* Blog */
     .blog {
       padding: 80px 0;
       background: var(--white);
@@ -483,6 +433,7 @@
       border-radius: var(--radius-md);
       overflow: hidden;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     .blog-card:hover {
@@ -518,9 +469,7 @@
       padding: 4px;
     }
 
-    .blog-card-content {
-      padding: 24px;
-    }
+    .blog-card-content { padding: 24px; }
 
     .blog-card-category {
       display: inline-block;
@@ -555,7 +504,7 @@
       margin-top: 50px;
     }
 
-    /* Featured Post */
+    /* Featured */
     .featured {
       padding: 60px 0;
       background: linear-gradient(135deg, var(--blush) 0%, var(--cream-dark) 100%);
@@ -568,6 +517,7 @@
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-lg);
+      cursor: pointer;
     }
 
     .featured-image {
@@ -701,13 +651,8 @@
       align-items: start;
     }
 
-    .footer-brand .logo-name {
-      color: var(--rosa);
-    }
-
-    .footer-brand .logo-tagline {
-      color: rgba(255,255,255,0.6);
-    }
+    .footer-brand .logo-name { color: var(--rosa); }
+    .footer-brand .logo-tagline { color: rgba(255,255,255,0.6); }
 
     .footer-brand p {
       margin-top: 16px;
@@ -734,9 +679,7 @@
       transition: color 0.3s ease;
     }
 
-    .footer-links a:hover {
-      color: var(--rosa);
-    }
+    .footer-links a:hover { color: var(--rosa); }
 
     .footer-bottom {
       margin-top: 50px;
@@ -758,7 +701,7 @@
       opacity: 0.6;
     }
 
-    /* Login Modal */
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -771,30 +714,36 @@
       z-index: 1000;
       align-items: center;
       justify-content: center;
+      padding: 20px;
     }
 
-    .modal.active {
-      display: flex;
-    }
+    .modal.active { display: flex; }
 
     .modal-box {
       background: var(--white);
-      padding: 50px;
+      padding: 40px;
       border-radius: var(--radius-lg);
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
+      max-height: 90vh;
+      overflow-y: auto;
       position: relative;
+    }
+
+    .modal-box.large {
+      max-width: 800px;
     }
 
     .modal-close {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 16px;
+      right: 16px;
       background: none;
       border: none;
-      font-size: 24px;
+      font-size: 28px;
       cursor: pointer;
       color: var(--taupe);
+      line-height: 1;
     }
 
     .modal-bow {
@@ -809,14 +758,18 @@
       margin-bottom: 8px;
     }
 
-    .modal p {
+    .modal > p, .modal-box > p {
       text-align: center;
       color: var(--taupe);
       font-size: 14px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
-    .modal label {
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
       display: block;
       font-size: 13px;
       font-weight: 600;
@@ -824,131 +777,203 @@
       color: var(--charcoal);
     }
 
-    .modal input {
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
       width: 100%;
       padding: 12px 16px;
       border: 2px solid var(--blush);
       border-radius: var(--radius-sm);
       font-size: 15px;
-      margin-bottom: 16px;
       font-family: inherit;
+      transition: border-color 0.3s ease;
     }
 
-    .modal input:focus {
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
       outline: none;
       border-color: var(--rosa);
     }
 
-    .modal button[type="submit"] {
-      width: 100%;
-      padding: 14px;
-      background: var(--rosa);
-      color: var(--white);
-      border: none;
-      border-radius: var(--radius-sm);
-      font-size: 15px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s ease;
+    .form-group textarea {
+      min-height: 200px;
+      resize: vertical;
     }
 
-    .modal button[type="submit"]:hover {
-      background: var(--rosa-dark);
+    .form-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
     }
+
+    .form-actions .btn {
+      flex: 1;
+    }
+
+    /* Post Detail Modal */
+    .post-detail-image {
+      width: calc(100% + 80px);
+      margin: -40px -40px 30px -40px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .post-detail-category {
+      display: inline-block;
+      background: var(--blush);
+      color: var(--rosa-dark);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .post-detail-title {
+      font-size: 32px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .post-detail-meta {
+      color: var(--taupe);
+      font-size: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--blush);
+    }
+
+    .post-detail-content {
+      color: var(--charcoal);
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .post-detail-content p {
+      margin-bottom: 20px;
+    }
+
+    /* Admin Bar */
+    .admin-bar {
+      display: none;
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 12px 0;
+    }
+
+    .admin-bar.active { display: block; }
+
+    .admin-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .admin-bar span {
+      font-size: 14px;
+    }
+
+    .admin-bar-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* Loading */
+    .loading {
+      text-align: center;
+      padding: 60px;
+      color: var(--taupe);
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--blush);
+      border-top-color: var(--rosa);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 16px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Toast Notifications */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 16px 24px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-lg);
+      z-index: 2000;
+      animation: slideIn 0.3s ease;
+    }
+
+    .toast.success { background: var(--success); }
+    .toast.error { background: var(--error); }
+
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    /* Hidden */
+    .hidden { display: none !important; }
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .hero-inner {
+      .hero-inner, .about-inner, .featured-card {
         grid-template-columns: 1fr;
         gap: 50px;
       }
-
-      .hero-content {
+      .hero-content, .about-image, .hero-image {
         max-width: 100%;
-        text-align: center;
-      }
-
-      .hero-cta {
-        justify-content: center;
-      }
-
-      .hero-image {
-        max-width: 500px;
         margin: 0 auto;
       }
-
-      .about-inner {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
-
-      .about-image {
-        max-width: 450px;
-        margin: 0 auto;
-      }
-
-      .topics-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .featured-card {
-        grid-template-columns: 1fr;
-      }
-
-      .featured-image {
-        height: 280px;
-      }
-
-      .featured-content {
-        padding: 35px;
-      }
-
-      .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
+      .hero-content { text-align: center; }
+      .hero-cta { justify-content: center; }
+      .hero-image, .about-image { max-width: 500px; }
+      .topics-grid { grid-template-columns: repeat(2, 1fr); }
+      .featured-image { height: 280px; }
+      .featured-content { padding: 35px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 40px; }
     }
 
     @media (max-width: 768px) {
-      .header-inner {
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      .nav {
-        gap: 16px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .blog-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .topics-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .newsletter-form {
-        flex-direction: column;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation: none !important;
-        transition-duration: 0.01ms !important;
+      .header-inner { flex-direction: column; gap: 16px; }
+      .nav { gap: 16px; flex-wrap: wrap; justify-content: center; }
+      .blog-grid, .topics-grid { grid-template-columns: 1fr; }
+      .newsletter-form { flex-direction: column; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .modal-box { padding: 30px 24px; }
+      .post-detail-image {
+        width: calc(100% + 48px);
+        margin: -30px -24px 24px -24px;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- Admin Bar (nur sichtbar wenn eingeloggt) -->
+  <div class="admin-bar" id="adminBar">
+    <div class="container">
+      <div class="admin-bar-inner">
+        <span>Eingeloggt als <strong>Babsi</strong></span>
+        <div class="admin-bar-actions">
+          <button class="btn btn-small btn-primary" onclick="openEditor()">+ Neuer Beitrag</button>
+          <button class="btn btn-small btn-ghost" onclick="logout()">Ausloggen</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Header -->
   <header class="header">
@@ -970,7 +995,7 @@
           <a href="#ueber-mich">Ueber mich</a>
           <a href="#themen">Themen</a>
           <a href="#blog">Blog</a>
-          <a href="#" class="btn btn-ghost" data-login>Anmelden</a>
+          <button class="btn btn-ghost" id="loginBtn">Anmelden</button>
         </nav>
       </div>
     </div>
@@ -988,7 +1013,7 @@
               Du bekommst dein <strong>erstes Kind</strong>? Oder vielleicht deinen <strong>ersten Jungen</strong>?
             </p>
             <p class="hero-text">
-              Lass mich dir helfen, die Fehler zu vermeiden, die ich gemacht habe. Auch wenn du schon Kinder hast - vielleicht interessieren dich meine Erfahrungen. Ich bin sicher, da ist was fuer dich dabei.
+              Lass mich dir helfen, die Fehler zu vermeiden, die ich gemacht habe. Auch wenn du schon Kinder hast - vielleicht interessieren dich meine Erfahrungen.
             </p>
             <div class="hero-cta">
               <a href="#blog" class="btn btn-primary">Zum Blog</a>
@@ -1040,10 +1065,10 @@
               Ich bin Babsi, Mama eines wunderbaren Sohnes, und ich kenne das Gefuehl: Man hat tausend Fragen, liest sich durch unzaehlige Artikel und am Ende ist man noch verwirrter als vorher.
             </p>
             <p>
-              Hier schreibe ich ueber die Dinge, ueber die man nicht immer spricht. Ueber <strong>Langzeitstillen</strong> und warum ich mich nicht rechtfertige. Ueber <strong>aufdringliche Familienmitglieder</strong> und wie ich gelernt habe, Grenzen zu setzen. Ueber <strong>Stillen in der Oeffentlichkeit</strong> und meine Gedanken dazu.
+              Hier schreibe ich ueber die Dinge, ueber die man nicht immer spricht. Ueber <strong>Langzeitstillen</strong> und warum ich mich nicht rechtfertige. Ueber <strong>aufdringliche Familienmitglieder</strong> und wie ich gelernt habe, Grenzen zu setzen.
             </p>
             <p>
-              Ich bin keine Expertin - nur eine Mama, die ihre Erfahrungen teilt. Vielleicht hilft dir etwas davon.
+              Ich bin keine Expertin - nur eine Mama, die ihre Erfahrungen teilt.
             </p>
             <p class="about-signature">Deine Babsi</p>
           </div>
@@ -1059,80 +1084,38 @@
           <p>Themen aus meinem echten Mama-Alltag</p>
         </div>
 
-        <div class="topics-grid">
-          <a href="#" class="topic-card">
-            <span class="bow topic-card-bow">
-              <svg viewBox="0 0 60 36" fill="none">
-                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
-                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
-              </svg>
-            </span>
+        <div class="topics-grid" id="topicsGrid">
+          <div class="topic-card" data-category="Stillen">
             <div class="topic-icon">&#x1F476;</div>
             <h3>Stillen</h3>
-            <p>Langzeitstillen, in der Oeffentlichkeit, Schmerzen, wenn Baby tritt</p>
-          </a>
-
-          <a href="#" class="topic-card">
-            <span class="bow topic-card-bow">
-              <svg viewBox="0 0 60 36" fill="none">
-                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
-                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
-              </svg>
-            </span>
+            <p>Langzeitstillen, in der Oeffentlichkeit, Schmerzen</p>
+          </div>
+          <div class="topic-card" data-category="Mein Baby">
             <div class="topic-icon">&#x1F467;</div>
             <h3>Mein Baby</h3>
-            <p>Abstehende Ohren, Entwicklung, Sorgen die man hat</p>
-          </a>
-
-          <a href="#" class="topic-card">
-            <span class="bow topic-card-bow">
-              <svg viewBox="0 0 60 36" fill="none">
-                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
-                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
-              </svg>
-            </span>
+            <p>Entwicklung, Sorgen, erste Male</p>
+          </div>
+          <div class="topic-card" data-category="Familie">
             <div class="topic-icon">&#x1F46A;</div>
             <h3>Familie</h3>
-            <p>Aufdringliche Verwandte, Aufgaben teilen mit dem Partner</p>
-          </a>
-
-          <a href="#" class="topic-card">
-            <span class="bow topic-card-bow">
-              <svg viewBox="0 0 60 36" fill="none">
-                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
-                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
-              </svg>
-            </span>
+            <p>Aufdringliche Verwandte, Partner, Aufgabenteilung</p>
+          </div>
+          <div class="topic-card" data-category="Mama-Alltag">
             <div class="topic-icon">&#x2615;</div>
             <h3>Mama-Alltag</h3>
-            <p>Kaffee trinken, Selbstfuersorge, die ehrliche Realitaet</p>
-          </a>
+            <p>Kaffee, Selbstfuersorge, die ehrliche Realitaet</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Featured Post -->
-    <section class="featured">
+    <section class="featured" id="featuredSection">
       <div class="container">
-        <div class="featured-card">
-          <div class="featured-image">
-            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=900&q=80" alt="Featured Post">
-            <span class="featured-badge">
-              <span class="bow">
-                <svg viewBox="0 0 60 36" fill="none">
-                  <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
-                  <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
-                </svg>
-              </span>
-              Aktueller Beitrag
-            </span>
-          </div>
-          <div class="featured-content">
-            <h3>Langzeitstillen - Warum ich mich nicht rechtfertige</h3>
-            <p>
-              Mein Sohn ist jetzt 18 Monate alt und wir stillen immer noch. Die Blicke, die Kommentare, die gut gemeinten Ratschlaege - ich kenne sie alle. Hier erzaehle ich, warum ich meinen Weg gehe.
-            </p>
-            <a href="#" class="btn btn-primary">Weiterlesen</a>
+        <div class="featured-card" id="featuredCard">
+          <div class="loading">
+            <div class="loading-spinner"></div>
+            Lade Beitrag...
           </div>
         </div>
       </div>
@@ -1146,52 +1129,15 @@
           <p>Geschichten und Gedanken aus meinem Alltag</p>
         </div>
 
-        <div class="blog-grid">
-          <article class="blog-card">
-            <div class="blog-card-image">
-              <span class="bow blog-card-bow">
-                <svg viewBox="0 0 60 36" fill="none">
-                  <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
-                  <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
-                </svg>
-              </span>
-              <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=600&q=80" alt="Blogbeitrag">
-            </div>
-            <div class="blog-card-content">
-              <span class="blog-card-category">Stillen</span>
-              <h3>Wenn dein Baby dich beim Stillen tritt</h3>
-              <p>Kleine Fuesse, grosse Wirkung. Wie ich damit umgehe, wenn mein Sohn mich kickt...</p>
-              <span class="blog-card-meta">5. Januar 2026</span>
-            </div>
-          </article>
-
-          <article class="blog-card">
-            <div class="blog-card-image">
-              <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80" alt="Blogbeitrag">
-            </div>
-            <div class="blog-card-content">
-              <span class="blog-card-category">Familie</span>
-              <h3>Nein Oma, du kannst nicht einfach vorbeikommen</h3>
-              <p>Ueber aufdringliche Familienmitglieder und wie ich gelernt habe, Grenzen zu setzen...</p>
-              <span class="blog-card-meta">28. Dezember 2025</span>
-            </div>
-          </article>
-
-          <article class="blog-card">
-            <div class="blog-card-image">
-              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Blogbeitrag">
-            </div>
-            <div class="blog-card-content">
-              <span class="blog-card-category">Mama-Alltag</span>
-              <h3>Kaffee in der Stillzeit - Was ich gelernt habe</h3>
-              <p>Darf ich? Wie viel? Meine ehrlichen Erfahrungen zum Thema Koffein und Stillen...</p>
-              <span class="blog-card-meta">20. Dezember 2025</span>
-            </div>
-          </article>
+        <div class="blog-grid" id="blogGrid">
+          <div class="loading">
+            <div class="loading-spinner"></div>
+            Lade Beitraege...
+          </div>
         </div>
 
         <div class="blog-more">
-          <a href="#" class="btn btn-outline">Alle Beitraege</a>
+          <button class="btn btn-outline" id="loadMoreBtn" style="display: none;">Mehr laden</button>
         </div>
       </div>
     </section>
@@ -1229,15 +1175,13 @@
           </div>
           <p>Ehrliche Geschichten und Erfahrungen aus meinem Mama-Alltag. Von Herzen, fuer dich.</p>
         </div>
-
         <div class="footer-links">
           <h4>Blog</h4>
-          <a href="#">Alle Beitraege</a>
-          <a href="#">Stillen</a>
-          <a href="#">Familie</a>
-          <a href="#">Mama-Alltag</a>
+          <a href="#blog">Alle Beitraege</a>
+          <a href="#" data-filter="Stillen">Stillen</a>
+          <a href="#" data-filter="Familie">Familie</a>
+          <a href="#" data-filter="Mama-Alltag">Mama-Alltag</a>
         </div>
-
         <div class="footer-links">
           <h4>Rechtliches</h4>
           <a href="#">Impressum</a>
@@ -1245,7 +1189,6 @@
           <a href="#">Kontakt</a>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>Mit Liebe gemacht von Babsi</p>
         <span class="bow footer-bow">
@@ -1262,7 +1205,7 @@
   <!-- Login Modal -->
   <div class="modal" id="loginModal">
     <div class="modal-box">
-      <button class="modal-close" data-close>&times;</button>
+      <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
       <span class="bow modal-bow">
         <svg viewBox="0 0 60 36" fill="none">
           <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
@@ -1271,53 +1214,467 @@
         </svg>
       </span>
       <h3>Willkommen zurueck</h3>
-      <p>Melde dich an, um neue Beitraege zu schreiben</p>
-      <form>
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" placeholder="deine@email.de" required>
-        <label for="password">Passwort</label>
-        <input type="password" id="password" placeholder="Dein Passwort" required>
-        <button type="submit">Anmelden</button>
+      <p>Melde dich an, um Beitraege zu schreiben</p>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" placeholder="deine@email.de" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Passwort</label>
+          <input type="password" id="password" placeholder="Dein Passwort" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Anmelden</button>
+        </div>
       </form>
     </div>
   </div>
 
+  <!-- Post Editor Modal -->
+  <div class="modal" id="editorModal">
+    <div class="modal-box large">
+      <button class="modal-close" onclick="closeModal('editorModal')">&times;</button>
+      <h3 id="editorTitle">Neuer Beitrag</h3>
+      <p>Schreibe einen neuen Blog-Beitrag</p>
+      <form id="postForm">
+        <input type="hidden" id="postId">
+        <div class="form-group">
+          <label for="postTitle">Titel</label>
+          <input type="text" id="postTitle" placeholder="Der Titel deines Beitrags" required>
+        </div>
+        <div class="form-group">
+          <label for="postExcerpt">Kurzbeschreibung</label>
+          <input type="text" id="postExcerpt" placeholder="Eine kurze Zusammenfassung (fuer die Vorschau)">
+        </div>
+        <div class="form-group">
+          <label for="postCategory">Kategorie</label>
+          <select id="postCategory">
+            <option value="Mama-Alltag">Mama-Alltag</option>
+            <option value="Stillen">Stillen</option>
+            <option value="Mein Baby">Mein Baby</option>
+            <option value="Familie">Familie</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="postImage">Bild-URL</label>
+          <input type="url" id="postImage" placeholder="https://images.unsplash.com/...">
+        </div>
+        <div class="form-group">
+          <label for="postContent">Inhalt</label>
+          <textarea id="postContent" placeholder="Schreibe hier deinen Beitrag...
+
+Du kannst Absaetze durch Leerzeilen trennen." required></textarea>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="postFeatured"> Als Featured-Beitrag markieren
+          </label>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline" onclick="saveAsDraft()">Als Entwurf speichern</button>
+          <button type="submit" class="btn btn-primary">Veroeffentlichen</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Post Detail Modal -->
+  <div class="modal" id="postModal">
+    <div class="modal-box large">
+      <button class="modal-close" onclick="closeModal('postModal')">&times;</button>
+      <div id="postDetail"></div>
+    </div>
+  </div>
+
+  <!-- Supabase Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <script>
-    // Login Modal
-    const loginBtn = document.querySelector('[data-login]');
-    const modal = document.getElementById('loginModal');
-    const closeBtn = document.querySelector('[data-close]');
+    // ============================================
+    // SUPABASE KONFIGURATION
+    // ============================================
+    // WICHTIG: Ersetze diese Werte mit deinen Supabase Credentials!
+    // Du findest sie unter: supabase.com > Dein Projekt > Settings > API
 
-    if (loginBtn && modal) {
-      loginBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('active');
+    const SUPABASE_URL = 'DEINE_SUPABASE_URL';  // z.B. https://xyz.supabase.co
+    const SUPABASE_ANON_KEY = 'DEIN_ANON_KEY';  // Der "anon public" Key
+
+    // ============================================
+
+    let supabase;
+    let currentUser = null;
+    let allPosts = [];
+    let currentFilter = null;
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Check if Supabase is configured
+      if (SUPABASE_URL === 'DEINE_SUPABASE_URL') {
+        showConfigWarning();
+        return;
+      }
+
+      // Initialize Supabase
+      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+      // Check auth state
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        currentUser = session.user;
+        showAdminUI();
+      }
+
+      // Listen for auth changes
+      supabase.auth.onAuthStateChange((event, session) => {
+        currentUser = session?.user || null;
+        if (currentUser) {
+          showAdminUI();
+        } else {
+          hideAdminUI();
+        }
       });
 
-      closeBtn.addEventListener('click', () => {
-        modal.classList.remove('active');
+      // Load posts
+      await loadPosts();
+
+      // Setup event listeners
+      setupEventListeners();
+    });
+
+    function showConfigWarning() {
+      document.getElementById('blogGrid').innerHTML = `
+        <div style="grid-column: 1/-1; text-align: center; padding: 40px; background: var(--blush); border-radius: var(--radius-md);">
+          <h3 style="margin-bottom: 16px;">Supabase noch nicht konfiguriert</h3>
+          <p style="color: var(--taupe); margin-bottom: 20px;">
+            Oeffne die index.html und ersetze SUPABASE_URL und SUPABASE_ANON_KEY mit deinen Werten.
+          </p>
+          <p style="font-size: 14px; color: var(--taupe);">
+            1. Gehe zu <a href="https://supabase.com" target="_blank" style="color: var(--rosa-dark);">supabase.com</a><br>
+            2. Erstelle ein neues Projekt<br>
+            3. Fuehre die setup.sql aus (SQL Editor)<br>
+            4. Kopiere URL und anon key (Settings > API)
+          </p>
+        </div>
+      `;
+      document.getElementById('featuredCard').innerHTML = '';
+    }
+
+    async function loadPosts() {
+      try {
+        const { data, error } = await supabase
+          .from('posts')
+          .select('*')
+          .eq('published', true)
+          .order('created_at', { ascending: false });
+
+        if (error) throw error;
+
+        allPosts = data || [];
+        renderFeaturedPost();
+        renderBlogPosts();
+      } catch (err) {
+        console.error('Error loading posts:', err);
+        document.getElementById('blogGrid').innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; color: var(--taupe);">
+            Fehler beim Laden der Beitraege. Bitte spaeter erneut versuchen.
+          </div>
+        `;
+      }
+    }
+
+    function renderFeaturedPost() {
+      const featured = allPosts.find(p => p.featured) || allPosts[0];
+      if (!featured) {
+        document.getElementById('featuredSection').style.display = 'none';
+        return;
+      }
+
+      document.getElementById('featuredCard').innerHTML = `
+        <div class="featured-image" onclick="openPost('${featured.id}')">
+          <img src="${featured.image_url || 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=900&q=80'}" alt="${featured.title}">
+          <span class="featured-badge">
+            <span class="bow">
+              <svg viewBox="0 0 60 36" fill="none">
+                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+              </svg>
+            </span>
+            Aktueller Beitrag
+          </span>
+        </div>
+        <div class="featured-content">
+          <h3>${featured.title}</h3>
+          <p>${featured.excerpt || featured.content.substring(0, 200) + '...'}</p>
+          <button class="btn btn-primary" onclick="openPost('${featured.id}')">Weiterlesen</button>
+        </div>
+      `;
+    }
+
+    function renderBlogPosts() {
+      const posts = currentFilter
+        ? allPosts.filter(p => p.category === currentFilter && !p.featured)
+        : allPosts.filter(p => !p.featured);
+
+      if (posts.length === 0) {
+        document.getElementById('blogGrid').innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; color: var(--taupe); padding: 40px;">
+            ${currentFilter ? `Keine Beitraege in der Kategorie "${currentFilter}" gefunden.` : 'Noch keine Beitraege vorhanden.'}
+          </div>
+        `;
+        return;
+      }
+
+      document.getElementById('blogGrid').innerHTML = posts.slice(0, 6).map(post => `
+        <article class="blog-card" onclick="openPost('${post.id}')">
+          <div class="blog-card-image">
+            ${post.featured ? `
+              <span class="bow blog-card-bow">
+                <svg viewBox="0 0 60 36" fill="none">
+                  <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+                  <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+                </svg>
+              </span>
+            ` : ''}
+            <img src="${post.image_url || 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=600&q=80'}" alt="${post.title}">
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-card-category">${post.category}</span>
+            <h3>${post.title}</h3>
+            <p>${post.excerpt || post.content.substring(0, 100) + '...'}</p>
+            <span class="blog-card-meta">${formatDate(post.created_at)}</span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function openPost(id) {
+      const post = allPosts.find(p => p.id === id);
+      if (!post) return;
+
+      const content = post.content.split('\n\n').map(p => `<p>${p}</p>`).join('');
+
+      document.getElementById('postDetail').innerHTML = `
+        <img class="post-detail-image" src="${post.image_url || 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=900&q=80'}" alt="${post.title}">
+        <span class="post-detail-category">${post.category}</span>
+        <h2 class="post-detail-title">${post.title}</h2>
+        <div class="post-detail-meta">
+          Von Babsi | ${formatDate(post.created_at)}
+        </div>
+        <div class="post-detail-content">
+          ${content}
+        </div>
+        ${currentUser ? `
+          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--blush); display: flex; gap: 12px;">
+            <button class="btn btn-small btn-outline" onclick="editPost('${post.id}')">Bearbeiten</button>
+            <button class="btn btn-small btn-danger" onclick="deletePost('${post.id}')">Loeschen</button>
+          </div>
+        ` : ''}
+      `;
+
+      openModal('postModal');
+    }
+
+    function formatDate(dateStr) {
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    // Auth functions
+    async function login(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email,
+          password
+        });
+
+        if (error) throw error;
+
+        showToast('Erfolgreich eingeloggt!', 'success');
+        closeModal('loginModal');
+        await loadPosts();
+      } catch (err) {
+        showToast(err.message || 'Login fehlgeschlagen', 'error');
+      }
+    }
+
+    async function logout() {
+      await supabase.auth.signOut();
+      showToast('Ausgeloggt', 'success');
+      hideAdminUI();
+    }
+
+    function showAdminUI() {
+      document.getElementById('adminBar').classList.add('active');
+      document.getElementById('loginBtn').textContent = 'Dashboard';
+      document.getElementById('loginBtn').onclick = () => openEditor();
+    }
+
+    function hideAdminUI() {
+      document.getElementById('adminBar').classList.remove('active');
+      document.getElementById('loginBtn').textContent = 'Anmelden';
+      document.getElementById('loginBtn').onclick = () => openModal('loginModal');
+    }
+
+    // Post functions
+    function openEditor(postId = null) {
+      if (postId) {
+        const post = allPosts.find(p => p.id === postId);
+        if (post) {
+          document.getElementById('editorTitle').textContent = 'Beitrag bearbeiten';
+          document.getElementById('postId').value = post.id;
+          document.getElementById('postTitle').value = post.title;
+          document.getElementById('postExcerpt').value = post.excerpt || '';
+          document.getElementById('postCategory').value = post.category;
+          document.getElementById('postImage').value = post.image_url || '';
+          document.getElementById('postContent').value = post.content;
+          document.getElementById('postFeatured').checked = post.featured;
+        }
+      } else {
+        document.getElementById('editorTitle').textContent = 'Neuer Beitrag';
+        document.getElementById('postForm').reset();
+        document.getElementById('postId').value = '';
+      }
+      openModal('editorModal');
+    }
+
+    function editPost(id) {
+      closeModal('postModal');
+      openEditor(id);
+    }
+
+    async function savePost(e, published = true) {
+      e.preventDefault();
+
+      const postData = {
+        title: document.getElementById('postTitle').value,
+        excerpt: document.getElementById('postExcerpt').value,
+        category: document.getElementById('postCategory').value,
+        image_url: document.getElementById('postImage').value,
+        content: document.getElementById('postContent').value,
+        featured: document.getElementById('postFeatured').checked,
+        published: published,
+        updated_at: new Date().toISOString()
+      };
+
+      const postId = document.getElementById('postId').value;
+
+      try {
+        let result;
+        if (postId) {
+          result = await supabase.from('posts').update(postData).eq('id', postId);
+        } else {
+          result = await supabase.from('posts').insert([postData]);
+        }
+
+        if (result.error) throw result.error;
+
+        showToast(published ? 'Beitrag veroeffentlicht!' : 'Entwurf gespeichert!', 'success');
+        closeModal('editorModal');
+        await loadPosts();
+      } catch (err) {
+        showToast(err.message || 'Fehler beim Speichern', 'error');
+      }
+    }
+
+    function saveAsDraft() {
+      savePost(new Event('submit'), false);
+    }
+
+    async function deletePost(id) {
+      if (!confirm('Beitrag wirklich loeschen?')) return;
+
+      try {
+        const { error } = await supabase.from('posts').delete().eq('id', id);
+        if (error) throw error;
+
+        showToast('Beitrag geloescht', 'success');
+        closeModal('postModal');
+        await loadPosts();
+      } catch (err) {
+        showToast(err.message || 'Fehler beim Loeschen', 'error');
+      }
+    }
+
+    // UI functions
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function showToast(message, type = 'info') {
+      const toast = document.createElement('div');
+      toast.className = `toast ${type}`;
+      toast.textContent = message;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
+    }
+
+    function setupEventListeners() {
+      // Login form
+      document.getElementById('loginForm').addEventListener('submit', login);
+
+      // Post form
+      document.getElementById('postForm').addEventListener('submit', (e) => savePost(e, true));
+
+      // Login button
+      document.getElementById('loginBtn').addEventListener('click', () => {
+        if (!currentUser) openModal('loginModal');
       });
 
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          modal.classList.remove('active');
+      // Topic filters
+      document.querySelectorAll('.topic-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const category = card.dataset.category;
+          document.querySelectorAll('.topic-card').forEach(c => c.classList.remove('active'));
+
+          if (currentFilter === category) {
+            currentFilter = null;
+          } else {
+            currentFilter = category;
+            card.classList.add('active');
+          }
+
+          renderBlogPosts();
+        });
+      });
+
+      // Footer filter links
+      document.querySelectorAll('[data-filter]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          currentFilter = link.dataset.filter;
+          document.querySelectorAll('.topic-card').forEach(c => {
+            c.classList.toggle('active', c.dataset.category === currentFilter);
+          });
+          renderBlogPosts();
+          document.getElementById('blog').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Close modals on outside click
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal(modal.id);
+        });
+      });
+
+      // Close modals on Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.modal.active').forEach(m => closeModal(m.id));
         }
       });
     }
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && !this.hasAttribute('data-login')) {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }
-      });
-    });
   </script>
 
   <!-- Schema.org -->
@@ -1326,16 +1683,9 @@
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Babsi - Mama schreibt Blog",
-    "description": "Ehrliche Tipps und Erfahrungen von Mama zu Mama - Stillen, Familie, Baby-Alltag",
+    "description": "Ehrliche Tipps und Erfahrungen von Mama zu Mama",
     "url": "https://mama-schreibt-blog.com",
-    "author": {
-      "@type": "Person",
-      "name": "Babsi"
-    },
-    "publisher": {
-      "@type": "Person",
-      "name": "Babsi"
-    }
+    "author": { "@type": "Person", "name": "Babsi" }
   }
   </script>
 
