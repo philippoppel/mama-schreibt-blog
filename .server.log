@@ -1,0 +1,19 @@
+127.0.0.1 - - [09/Jan/2026 20:06:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jan/2026 20:06:43] code 404, message File not found
+127.0.0.1 - - [09/Jan/2026 20:06:43] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [09/Jan/2026 20:10:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jan/2026 20:10:11] code 404, message File not found
+127.0.0.1 - - [09/Jan/2026 20:10:11] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [09/Jan/2026 20:15:29] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jan/2026 20:15:30] code 404, message File not found
+127.0.0.1 - - [09/Jan/2026 20:15:30] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [09/Jan/2026 20:21:20] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jan/2026 20:21:20] "GET /videos/hero-therapy.webm HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jan/2026 20:21:21] code 404, message File not found
+127.0.0.1 - - [09/Jan/2026 20:21:21] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [09/Jan/2026 20:33:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jan/2026 20:33:37] code 404, message File not found
+127.0.0.1 - - [09/Jan/2026 20:33:37] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [09/Jan/2026 20:33:39] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jan/2026 20:33:39] code 404, message File not found
+127.0.0.1 - - [09/Jan/2026 20:33:39] "GET /favicon.ico HTTP/1.1" 404 -

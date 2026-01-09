@@ -1,0 +1,1343 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Babsi - Mama schreibt Blog | Ehrliche Tipps von Mama zu Mama</title>
+  <meta name="description" content="Hi, ich bin Babsi! Hier teile ich meine ehrlichen Erfahrungen als Mama - von Langzeitstillen bis Familienalltag. Lass mich dir helfen, meine Fehler zu vermeiden.">
+  <link rel="canonical" href="https://mama-schreibt-blog.com/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Babsi - Mama schreibt Blog">
+  <meta property="og:description" content="Ehrliche Tipps von Mama zu Mama. Stillen, Familie, Baby-Alltag und alles was dazugehoert.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mama-schreibt-blog.com/">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#e8a0a8">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blush: #f8e1e4;
+      --rosa: #e8a0a8;
+      --rosa-dark: #d4878f;
+      --rosa-deep: #c46b75;
+      --cream: #fdf8f6;
+      --cream-dark: #f9f1ed;
+      --taupe: #8b7d75;
+      --charcoal: #3d3632;
+      --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(61, 54, 50, 0.06);
+      --shadow-md: 0 4px 20px rgba(61, 54, 50, 0.08);
+      --shadow-lg: 0 8px 30px rgba(61, 54, 50, 0.12);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Nunito", -apple-system, sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--charcoal);
+    }
+
+    .script {
+      font-family: "Dancing Script", cursive;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Schleife SVG */
+    .bow {
+      display: inline-block;
+    }
+
+    .bow svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Header */
+    .header {
+      padding: 20px 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--blush);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .logo-bow {
+      width: 32px;
+      height: 20px;
+      margin-bottom: -4px;
+    }
+
+    .logo-name {
+      font-family: "Dancing Script", cursive;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--rosa-dark);
+      line-height: 1;
+    }
+
+    .logo-tagline {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--taupe);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--taupe);
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav a:hover {
+      color: var(--rosa-dark);
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--rosa);
+      transition: width 0.3s ease;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--rosa);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--rosa-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(232, 160, 168, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--rosa);
+      color: var(--rosa-dark);
+    }
+
+    .btn-outline:hover {
+      background: var(--rosa);
+      color: var(--white);
+    }
+
+    .btn-ghost {
+      background: var(--blush);
+      color: var(--rosa-dark);
+      padding: 10px 20px;
+    }
+
+    .btn-ghost:hover {
+      background: var(--rosa);
+      color: var(--white);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--blush) 0%, transparent 70%);
+      opacity: 0.6;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 520px;
+    }
+
+    .hero-greeting {
+      font-family: "Dancing Script", cursive;
+      font-size: 28px;
+      color: var(--rosa-dark);
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 4.5vw, 52px);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-text {
+      color: var(--taupe);
+      font-size: 18px;
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+
+    .hero-text strong {
+      color: var(--charcoal);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-image-bow {
+      position: absolute;
+      top: -15px;
+      right: 30px;
+      width: 60px;
+      height: 40px;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 30px;
+      left: -20px;
+      background: var(--white);
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      font-size: 14px;
+      color: var(--taupe);
+      max-width: 200px;
+    }
+
+    .hero-badge strong {
+      display: block;
+      color: var(--charcoal);
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    /* Section Divider with Bow */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .divider-line {
+      flex: 1;
+      max-width: 200px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--rosa), transparent);
+    }
+
+    .divider-bow {
+      width: 50px;
+      height: 32px;
+      margin: 0 20px;
+    }
+
+    /* About Section */
+    .about {
+      padding: 60px 0 80px;
+      background: var(--white);
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-image::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: -20px;
+      bottom: -20px;
+      border: 2px solid var(--rosa);
+      border-radius: var(--radius-lg);
+      z-index: -1;
+    }
+
+    .about-content h2 {
+      font-size: 38px;
+      margin-bottom: 24px;
+    }
+
+    .about-content p {
+      color: var(--taupe);
+      margin-bottom: 16px;
+    }
+
+    .about-signature {
+      font-family: "Dancing Script", cursive;
+      font-size: 32px;
+      color: var(--rosa-dark);
+      margin-top: 24px;
+    }
+
+    /* Topics Section */
+    .topics {
+      padding: 80px 0;
+      background: var(--cream);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--taupe);
+      font-size: 18px;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .topic-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+      position: relative;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--rosa);
+    }
+
+    .topic-card-bow {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      width: 28px;
+      height: 18px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .topic-card:hover .topic-card-bow {
+      opacity: 1;
+    }
+
+    .topic-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    .topic-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .topic-card p {
+      font-size: 14px;
+      color: var(--taupe);
+    }
+
+    /* Blog Section */
+    .blog {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .blog-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .blog-card-image {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .blog-card:hover .blog-card-image img {
+      transform: scale(1.05);
+    }
+
+    .blog-card-bow {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 32px;
+      height: 20px;
+      background: var(--white);
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    .blog-card-content {
+      padding: 24px;
+    }
+
+    .blog-card-category {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--rosa-dark);
+      margin-bottom: 10px;
+    }
+
+    .blog-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .blog-card p {
+      font-size: 15px;
+      color: var(--taupe);
+      margin-bottom: 16px;
+    }
+
+    .blog-card-meta {
+      font-size: 13px;
+      color: var(--taupe);
+      opacity: 0.8;
+    }
+
+    .blog-more {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* Featured Post */
+    .featured {
+      padding: 60px 0;
+      background: linear-gradient(135deg, var(--blush) 0%, var(--cream-dark) 100%);
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .featured-image {
+      height: 400px;
+      position: relative;
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--rosa-dark);
+    }
+
+    .featured-badge .bow {
+      width: 20px;
+      height: 14px;
+    }
+
+    .featured-content {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-content h3 {
+      font-size: 30px;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .featured-content p {
+      color: var(--taupe);
+      font-size: 16px;
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    /* Newsletter */
+    .newsletter {
+      padding: 80px 0;
+      background: var(--cream);
+    }
+
+    .newsletter-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .newsletter-bow {
+      width: 50px;
+      height: 32px;
+      margin: 0 auto 20px;
+    }
+
+    .newsletter h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .newsletter p {
+      color: var(--taupe);
+      margin-bottom: 28px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 14px 20px;
+      border: 2px solid var(--blush);
+      border-radius: 50px;
+      font-size: 16px;
+      font-family: inherit;
+      background: var(--white);
+    }
+
+    .newsletter-form input:focus {
+      outline: none;
+      border-color: var(--rosa);
+    }
+
+    .newsletter-form button {
+      background: var(--rosa);
+      color: var(--white);
+      padding: 14px 28px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: var(--rosa-dark);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 60px 0 40px;
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .footer-brand .logo-name {
+      color: var(--rosa);
+    }
+
+    .footer-brand .logo-tagline {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-brand p {
+      margin-top: 16px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      max-width: 280px;
+    }
+
+    .footer-links h4 {
+      color: var(--white);
+      font-family: "Nunito", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      display: block;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--rosa);
+    }
+
+    .footer-bottom {
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-bow {
+      width: 30px;
+      height: 20px;
+      opacity: 0.6;
+    }
+
+    /* Login Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(61, 54, 50, 0.6);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--white);
+      padding: 50px;
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--taupe);
+    }
+
+    .modal-bow {
+      width: 40px;
+      height: 26px;
+      margin: 0 auto 16px;
+    }
+
+    .modal h3 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .modal p {
+      text-align: center;
+      color: var(--taupe);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .modal label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--charcoal);
+    }
+
+    .modal input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--blush);
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      margin-bottom: 16px;
+      font-family: inherit;
+    }
+
+    .modal input:focus {
+      outline: none;
+      border-color: var(--rosa);
+    }
+
+    .modal button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background: var(--rosa);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .modal button[type="submit"]:hover {
+      background: var(--rosa-dark);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .hero-image {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .about-image {
+        max-width: 450px;
+        margin: 0 auto;
+      }
+
+      .topics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-image {
+        height: 280px;
+      }
+
+      .featured-content {
+        padding: 35px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <span class="bow logo-bow">
+            <svg viewBox="0 0 60 36" fill="none">
+              <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+              <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+              <path d="M26 22l4 10m4-10l-4 10" stroke="#e8a0a8" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="logo-name">Babsi</span>
+          <span class="logo-tagline">Mama schreibt Blog</span>
+        </a>
+
+        <nav class="nav">
+          <a href="#ueber-mich">Ueber mich</a>
+          <a href="#themen">Themen</a>
+          <a href="#blog">Blog</a>
+          <a href="#" class="btn btn-ghost" data-login>Anmelden</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <p class="hero-greeting">Hi, ich bin Babsi!</p>
+            <h1>Ehrliche Geschichten von Mama zu Mama</h1>
+            <p class="hero-text">
+              Du bekommst dein <strong>erstes Kind</strong>? Oder vielleicht deinen <strong>ersten Jungen</strong>?
+            </p>
+            <p class="hero-text">
+              Lass mich dir helfen, die Fehler zu vermeiden, die ich gemacht habe. Auch wenn du schon Kinder hast - vielleicht interessieren dich meine Erfahrungen. Ich bin sicher, da ist was fuer dich dabei.
+            </p>
+            <div class="hero-cta">
+              <a href="#blog" class="btn btn-primary">Zum Blog</a>
+              <a href="#ueber-mich" class="btn btn-outline">Mehr ueber mich</a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <span class="bow hero-image-bow">
+              <svg viewBox="0 0 60 36" fill="none">
+                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+                <path d="M26 22l4 10m4-10l-4 10" stroke="#e8a0a8" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?auto=format&fit=crop&w=800&q=80" alt="Mama mit Baby">
+            <div class="hero-badge">
+              <strong>Von Herzen</strong>
+              Echte Erfahrungen, keine perfekte Mama-Welt
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider">
+      <span class="divider-line"></span>
+      <span class="bow divider-bow">
+        <svg viewBox="0 0 60 36" fill="none">
+          <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+          <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+          <path d="M26 22l4 10m4-10l-4 10" stroke="#e8a0a8" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="divider-line"></span>
+    </div>
+
+    <!-- About -->
+    <section id="ueber-mich" class="about">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=700&q=80" alt="Babsi">
+          </div>
+          <div class="about-content">
+            <h2>Schoen, dass du hier bist</h2>
+            <p>
+              Ich bin Babsi, Mama eines wunderbaren Sohnes, und ich kenne das Gefuehl: Man hat tausend Fragen, liest sich durch unzaehlige Artikel und am Ende ist man noch verwirrter als vorher.
+            </p>
+            <p>
+              Hier schreibe ich ueber die Dinge, ueber die man nicht immer spricht. Ueber <strong>Langzeitstillen</strong> und warum ich mich nicht rechtfertige. Ueber <strong>aufdringliche Familienmitglieder</strong> und wie ich gelernt habe, Grenzen zu setzen. Ueber <strong>Stillen in der Oeffentlichkeit</strong> und meine Gedanken dazu.
+            </p>
+            <p>
+              Ich bin keine Expertin - nur eine Mama, die ihre Erfahrungen teilt. Vielleicht hilft dir etwas davon.
+            </p>
+            <p class="about-signature">Deine Babsi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topics -->
+    <section id="themen" class="topics">
+      <div class="container">
+        <div class="section-header">
+          <h2>Worueber ich schreibe</h2>
+          <p>Themen aus meinem echten Mama-Alltag</p>
+        </div>
+
+        <div class="topics-grid">
+          <a href="#" class="topic-card">
+            <span class="bow topic-card-bow">
+              <svg viewBox="0 0 60 36" fill="none">
+                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+              </svg>
+            </span>
+            <div class="topic-icon">&#x1F476;</div>
+            <h3>Stillen</h3>
+            <p>Langzeitstillen, in der Oeffentlichkeit, Schmerzen, wenn Baby tritt</p>
+          </a>
+
+          <a href="#" class="topic-card">
+            <span class="bow topic-card-bow">
+              <svg viewBox="0 0 60 36" fill="none">
+                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+              </svg>
+            </span>
+            <div class="topic-icon">&#x1F467;</div>
+            <h3>Mein Baby</h3>
+            <p>Abstehende Ohren, Entwicklung, Sorgen die man hat</p>
+          </a>
+
+          <a href="#" class="topic-card">
+            <span class="bow topic-card-bow">
+              <svg viewBox="0 0 60 36" fill="none">
+                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+              </svg>
+            </span>
+            <div class="topic-icon">&#x1F46A;</div>
+            <h3>Familie</h3>
+            <p>Aufdringliche Verwandte, Aufgaben teilen mit dem Partner</p>
+          </a>
+
+          <a href="#" class="topic-card">
+            <span class="bow topic-card-bow">
+              <svg viewBox="0 0 60 36" fill="none">
+                <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+                <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+              </svg>
+            </span>
+            <div class="topic-icon">&#x2615;</div>
+            <h3>Mama-Alltag</h3>
+            <p>Kaffee trinken, Selbstfuersorge, die ehrliche Realitaet</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured">
+      <div class="container">
+        <div class="featured-card">
+          <div class="featured-image">
+            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=900&q=80" alt="Featured Post">
+            <span class="featured-badge">
+              <span class="bow">
+                <svg viewBox="0 0 60 36" fill="none">
+                  <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+                  <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+                </svg>
+              </span>
+              Aktueller Beitrag
+            </span>
+          </div>
+          <div class="featured-content">
+            <h3>Langzeitstillen - Warum ich mich nicht rechtfertige</h3>
+            <p>
+              Mein Sohn ist jetzt 18 Monate alt und wir stillen immer noch. Die Blicke, die Kommentare, die gut gemeinten Ratschlaege - ich kenne sie alle. Hier erzaehle ich, warum ich meinen Weg gehe.
+            </p>
+            <a href="#" class="btn btn-primary">Weiterlesen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="blog">
+      <div class="container">
+        <div class="section-header">
+          <h2>Neuste Beitraege</h2>
+          <p>Geschichten und Gedanken aus meinem Alltag</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <span class="bow blog-card-bow">
+                <svg viewBox="0 0 60 36" fill="none">
+                  <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+                  <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+                </svg>
+              </span>
+              <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=600&q=80" alt="Blogbeitrag">
+            </div>
+            <div class="blog-card-content">
+              <span class="blog-card-category">Stillen</span>
+              <h3>Wenn dein Baby dich beim Stillen tritt</h3>
+              <p>Kleine Fuesse, grosse Wirkung. Wie ich damit umgehe, wenn mein Sohn mich kickt...</p>
+              <span class="blog-card-meta">5. Januar 2026</span>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80" alt="Blogbeitrag">
+            </div>
+            <div class="blog-card-content">
+              <span class="blog-card-category">Familie</span>
+              <h3>Nein Oma, du kannst nicht einfach vorbeikommen</h3>
+              <p>Ueber aufdringliche Familienmitglieder und wie ich gelernt habe, Grenzen zu setzen...</p>
+              <span class="blog-card-meta">28. Dezember 2025</span>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Blogbeitrag">
+            </div>
+            <div class="blog-card-content">
+              <span class="blog-card-category">Mama-Alltag</span>
+              <h3>Kaffee in der Stillzeit - Was ich gelernt habe</h3>
+              <p>Darf ich? Wie viel? Meine ehrlichen Erfahrungen zum Thema Koffein und Stillen...</p>
+              <span class="blog-card-meta">20. Dezember 2025</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="blog-more">
+          <a href="#" class="btn btn-outline">Alle Beitraege</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-inner">
+          <span class="bow newsletter-bow">
+            <svg viewBox="0 0 60 36" fill="none">
+              <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+              <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+              <path d="M26 22l4 10m4-10l-4 10" stroke="#e8a0a8" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h2>Bleib in Kontakt</h2>
+          <p>Neue Beitraege direkt in dein Postfach. Kein Spam, versprochen.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Deine E-Mail-Adresse" required>
+            <button type="submit">Anmelden</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-name">Babsi</span>
+            <span class="logo-tagline">Mama schreibt Blog</span>
+          </div>
+          <p>Ehrliche Geschichten und Erfahrungen aus meinem Mama-Alltag. Von Herzen, fuer dich.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Blog</h4>
+          <a href="#">Alle Beitraege</a>
+          <a href="#">Stillen</a>
+          <a href="#">Familie</a>
+          <a href="#">Mama-Alltag</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Rechtliches</h4>
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+          <a href="#">Kontakt</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Mit Liebe gemacht von Babsi</p>
+        <span class="bow footer-bow">
+          <svg viewBox="0 0 60 36" fill="none">
+            <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+            <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+          </svg>
+        </span>
+        <p>2026 mama-schreibt-blog.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <span class="bow modal-bow">
+        <svg viewBox="0 0 60 36" fill="none">
+          <path d="M30 18c-5-10-20-12-20 0s15 12 20 0c5 12 20 10 20 0s-15-10-20 0z" fill="#e8a0a8"/>
+          <ellipse cx="30" cy="18" rx="4" ry="3" fill="#d4878f"/>
+          <path d="M26 22l4 10m4-10l-4 10" stroke="#e8a0a8" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <h3>Willkommen zurueck</h3>
+      <p>Melde dich an, um neue Beitraege zu schreiben</p>
+      <form>
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" placeholder="deine@email.de" required>
+        <label for="password">Passwort</label>
+        <input type="password" id="password" placeholder="Dein Passwort" required>
+        <button type="submit">Anmelden</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Login Modal
+    const loginBtn = document.querySelector('[data-login]');
+    const modal = document.getElementById('loginModal');
+    const closeBtn = document.querySelector('[data-close]');
+
+    if (loginBtn && modal) {
+      loginBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('active');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && !this.hasAttribute('data-login')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  </script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Babsi - Mama schreibt Blog",
+    "description": "Ehrliche Tipps und Erfahrungen von Mama zu Mama - Stillen, Familie, Baby-Alltag",
+    "url": "https://mama-schreibt-blog.com",
+    "author": {
+      "@type": "Person",
+      "name": "Babsi"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Babsi"
+    }
+  }
+  </script>
+
+</body>
+</html>
