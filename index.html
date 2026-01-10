@@ -1966,7 +1966,7 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
     function showAdminUI() {
       document.getElementById('adminBar').classList.add('active');
       document.getElementById('loginBtn').textContent = 'Dashboard';
-      document.getElementById('loginBtn').onclick = () => openEditor();
+      document.getElementById('loginBtn').onclick = () => toggleDashboard();
     }
 
     function hideAdminUI() {
