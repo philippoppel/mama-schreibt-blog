@@ -18,11 +18,13 @@ CREATE TABLE IF NOT EXISTS posts (
 -- 2. RLS (Row Level Security) aktivieren
 ALTER TABLE posts ENABLE ROW LEVEL SECURITY;
 
--- 3. Policy: Jeder kann veroeffentlichte Posts lesen
+-- 3. Policy: Jeder kann veroeffentlichte Posts lesen (DROP erst falls existiert)
+DROP POLICY IF EXISTS "Jeder kann veroeffentlichte Posts lesen" ON posts;
 CREATE POLICY "Jeder kann veroeffentlichte Posts lesen" ON posts
   FOR SELECT USING (published = true);
 
--- 4. Policy: Authentifizierte User koennen alles
+-- 4. Policy: Authentifizierte User koennen alles (DROP erst falls existiert)
+DROP POLICY IF EXISTS "Auth Users haben vollen Zugriff" ON posts;
 CREATE POLICY "Auth Users haben vollen Zugriff" ON posts
   FOR ALL USING (auth.role() = 'authenticated');
 
@@ -288,6 +290,7 @@ ALTER TABLE posts ADD COLUMN IF NOT EXISTS seo_description TEXT;
 ALTER TABLE posts ADD COLUMN IF NOT EXISTS seo_keywords TEXT;
 
 -- 8. Policy: Erlaubt das Erhoehen des View-Counts fuer alle
+DROP POLICY IF EXISTS "Jeder kann Views erhoehen" ON posts;
 CREATE POLICY "Jeder kann Views erhoehen" ON posts
   FOR UPDATE USING (true)
   WITH CHECK (true);
