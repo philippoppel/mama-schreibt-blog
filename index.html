@@ -856,31 +856,6 @@
       margin-bottom: 20px;
     }
 
-    /* Admin Bar */
-    .admin-bar {
-      display: none;
-      background: var(--charcoal);
-      color: var(--white);
-      padding: 12px 0;
-    }
-
-    .admin-bar.active { display: block; }
-
-    .admin-bar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .admin-bar span {
-      font-size: 14px;
-    }
-
-    .admin-bar-actions {
-      display: flex;
-      gap: 12px;
-    }
-
     /* Loading */
     .loading {
       text-align: center;
@@ -1288,6 +1263,185 @@
       }
     }
 
+    /* ==========================================
+       VIEW MODE SYSTEM
+       ========================================== */
+
+    /* View Mode: Visitor (default for logged-in users viewing as visitor) */
+    body.view-visitor .dashboard-header-bar,
+    body.view-visitor .preview-indicator,
+    body.view-visitor .dashboard {
+      display: none !important;
+    }
+
+    /* View Mode: Preview (logged-in admin previewing blog) */
+    body.view-preview .dashboard-header-bar,
+    body.view-preview .dashboard {
+      display: none !important;
+    }
+
+    body.view-preview .preview-indicator {
+      display: flex !important;
+    }
+
+    body.view-preview .header,
+    body.view-preview main,
+    body.view-preview .footer {
+      display: block !important;
+    }
+
+    /* View Mode: Dashboard (admin dashboard) */
+    body.view-dashboard .header,
+    body.view-dashboard main,
+    body.view-dashboard .footer,
+    body.view-dashboard .preview-indicator {
+      display: none !important;
+    }
+
+    body.view-dashboard .dashboard-header-bar {
+      display: block !important;
+    }
+
+    body.view-dashboard .dashboard {
+      display: block !important;
+      min-height: calc(100vh - 70px);
+    }
+
+    /* Dashboard Header Bar */
+    .dashboard-header-bar {
+      display: none;
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .dashboard-header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .dashboard-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .dashboard-brand .logo-name {
+      color: var(--rosa);
+      font-size: 28px;
+    }
+
+    .dashboard-label {
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .dashboard-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-return-blog {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+
+    .btn-return-blog:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    /* Preview Indicator (Floating Pill) */
+    .preview-indicator {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 50px;
+      box-shadow: var(--shadow-lg), 0 8px 32px rgba(0,0,0,0.2);
+      z-index: 1000;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .preview-indicator-text {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .preview-indicator .btn {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+
+    /* Admin Nav Group in Header */
+    .admin-nav-group {
+      display: none;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .admin-nav-group.active {
+      display: flex;
+    }
+
+    .btn-dashboard {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 10px 20px;
+    }
+
+    .btn-dashboard:hover {
+      background: var(--rosa-dark);
+    }
+
+    /* Responsive View Mode */
+    @media (max-width: 768px) {
+      .dashboard-header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .dashboard-actions {
+        justify-content: center;
+      }
+
+      .preview-indicator {
+        bottom: 16px;
+        padding: 12px 20px;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: calc(100% - 32px);
+      }
+    }
+
     /* Responsive */
     @media (max-width: 1024px) {
       .hero-inner, .about-inner, .featured-card {
@@ -1323,18 +1477,30 @@
 </head>
 <body>
 
-  <!-- Admin Bar (nur sichtbar wenn eingeloggt) -->
-  <div class="admin-bar" id="adminBar">
+  <!-- Dashboard Header Bar (sichtbar im Dashboard-Modus) -->
+  <div class="dashboard-header-bar" id="dashboardHeaderBar">
     <div class="container">
-      <div class="admin-bar-inner">
-        <span>Eingeloggt als <strong>Babsi</strong></span>
-        <div class="admin-bar-actions">
-          <button class="btn btn-small btn-ghost" onclick="toggleDashboard()">Dashboard</button>
-          <button class="btn btn-small btn-primary" onclick="openEditor()">+ Neuer Beitrag</button>
-          <button class="btn btn-small btn-ghost" onclick="logout()">Ausloggen</button>
+      <div class="dashboard-header-inner">
+        <div class="dashboard-brand">
+          <span class="logo-name" style="font-family: 'Dancing Script', cursive;">Babsi</span>
+          <span class="dashboard-label">Dashboard</span>
+        </div>
+        <div class="dashboard-actions">
+          <button class="btn-return-blog" onclick="navigateTo('preview')">
+            &#8592; Blog ansehen
+          </button>
+          <button class="btn btn-primary btn-small" onclick="openEditor()">+ Neuer Beitrag</button>
+          <button class="btn btn-ghost btn-small" style="background: rgba(255,255,255,0.1); color: white;" onclick="logout()">Ausloggen</button>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Preview Indicator (schwebendes Element im Preview-Modus) -->
+  <div class="preview-indicator" id="previewIndicator">
+    <span class="preview-indicator-text">&#128065; Vorschau-Modus</span>
+    <button class="btn btn-ghost btn-small" style="background: rgba(255,255,255,0.2); color: white;" onclick="navigateTo('dashboard')">Zum Dashboard</button>
+    <button class="btn btn-primary btn-small" onclick="navigateTo('visitor')">Bearbeitung beenden</button>
   </div>
 
   <!-- Dashboard (nur sichtbar wenn eingeloggt) -->
@@ -1421,7 +1587,12 @@
           <a href="#ueber-mich">Über mich</a>
           <a href="#themen">Themen</a>
           <a href="#blog">Blog</a>
+          <!-- Login Button (für nicht eingeloggte Benutzer) -->
           <button class="btn btn-ghost" id="loginBtn">Anmelden</button>
+          <!-- Admin Nav Group (für eingeloggte Benutzer) -->
+          <div class="admin-nav-group" id="adminNavGroup">
+            <button class="btn btn-dashboard" onclick="navigateTo('dashboard')">&#9881; Dashboard</button>
+          </div>
         </nav>
       </div>
     </div>
@@ -1783,6 +1954,81 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
     let dashboardPosts = [];
     let dashboardFilter = 'all';
 
+    // ==========================================
+    // VIEW MODE ROUTER
+    // ==========================================
+
+    const ViewModes = {
+      VISITOR: 'visitor',
+      PREVIEW: 'preview',
+      DASHBOARD: 'dashboard'
+    };
+
+    let currentViewMode = ViewModes.VISITOR;
+
+    function initViewModeRouter() {
+      // Handle initial hash
+      handleHashChange();
+
+      // Listen for hash changes
+      window.addEventListener('hashchange', handleHashChange);
+    }
+
+    function handleHashChange() {
+      const hash = window.location.hash.toLowerCase();
+
+      if (hash === '#dashboard') {
+        if (currentUser) {
+          setViewMode(ViewModes.DASHBOARD);
+        } else {
+          // Not logged in, show login modal
+          openModal('loginModal');
+          history.replaceState('', document.title, window.location.pathname);
+        }
+      } else if (hash === '#preview') {
+        if (currentUser) {
+          setViewMode(ViewModes.PREVIEW);
+        } else {
+          history.replaceState('', document.title, window.location.pathname);
+        }
+      } else {
+        // Default: Visitor mode (includes #blog, #ueber-mich, etc.)
+        setViewMode(ViewModes.VISITOR);
+      }
+    }
+
+    function setViewMode(mode) {
+      // Remove all view mode classes
+      document.body.classList.remove('view-visitor', 'view-preview', 'view-dashboard');
+
+      // Add current view mode class
+      document.body.classList.add(`view-${mode}`);
+      currentViewMode = mode;
+
+      // Scroll to top when switching to dashboard
+      if (mode === ViewModes.DASHBOARD) {
+        window.scrollTo(0, 0);
+        loadDashboardPosts();
+      }
+    }
+
+    function navigateTo(mode) {
+      switch (mode) {
+        case 'dashboard':
+          window.location.hash = 'dashboard';
+          break;
+        case 'preview':
+          window.location.hash = 'preview';
+          break;
+        case 'visitor':
+        default:
+          // Clear hash completely
+          history.pushState('', document.title, window.location.pathname);
+          setViewMode(ViewModes.VISITOR);
+          break;
+      }
+    }
+
     // Initialize
     document.addEventListener('DOMContentLoaded', async () => {
       // Initialize Supabase
@@ -1810,6 +2056,9 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
 
       // Setup event listeners
       setupEventListeners();
+
+      // Initialize View Mode Router
+      initViewModeRouter();
     });
 
     async function loadPosts() {
@@ -1952,6 +2201,9 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
         showToast('Erfolgreich eingeloggt!', 'success');
         closeModal('loginModal');
         await loadPosts();
+
+        // Navigate to dashboard after login
+        navigateTo('dashboard');
       } catch (err) {
         showToast(err.message || 'Login fehlgeschlagen', 'error');
       }
@@ -1961,18 +2213,28 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
       await db.auth.signOut();
       showToast('Ausgeloggt', 'success');
       hideAdminUI();
+      // Navigate to visitor mode
+      navigateTo('visitor');
     }
 
     function showAdminUI() {
-      document.getElementById('adminBar').classList.add('active');
-      document.getElementById('loginBtn').textContent = 'Dashboard';
-      document.getElementById('loginBtn').onclick = () => toggleDashboard();
+      // Hide login button, show admin nav group
+      document.getElementById('loginBtn').style.display = 'none';
+      document.getElementById('adminNavGroup').classList.add('active');
+
+      // Re-evaluate current view mode based on hash
+      handleHashChange();
     }
 
     function hideAdminUI() {
-      document.getElementById('adminBar').classList.remove('active');
-      document.getElementById('loginBtn').textContent = 'Anmelden';
-      document.getElementById('loginBtn').onclick = () => openModal('loginModal');
+      // Show login button, hide admin nav group
+      document.getElementById('loginBtn').style.display = '';
+      document.getElementById('adminNavGroup').classList.remove('active');
+
+      // Force visitor mode
+      if (currentViewMode !== ViewModes.VISITOR) {
+        navigateTo('visitor');
+      }
     }
 
     // Post functions
@@ -2278,18 +2540,6 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
         tab.classList.toggle('active', tab.dataset.filter === filter);
       });
       renderPostsTable();
-    }
-
-    function toggleDashboard() {
-      const dashboard = document.getElementById('dashboard');
-      const isVisible = dashboard.classList.contains('active');
-
-      if (isVisible) {
-        dashboard.classList.remove('active');
-      } else {
-        dashboard.classList.add('active');
-        loadDashboardPosts();
-      }
     }
 
     async function quickPublish(id) {
