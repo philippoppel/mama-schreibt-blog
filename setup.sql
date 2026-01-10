@@ -116,3 +116,15 @@ Und das Wichtigste: Du bist keine schlechte Mutter, weil du Kaffee brauchst. Wir
 -- 6. Index fuer schnellere Abfragen
 CREATE INDEX IF NOT EXISTS posts_published_idx ON posts(published);
 CREATE INDEX IF NOT EXISTS posts_created_at_idx ON posts(created_at DESC);
+
+-- 7. MIGRATION: Neue Spalten fuer View-Tracking und SEO (fuer bestehende Datenbanken)
+-- Fuehre diese Befehle aus, wenn die Tabelle bereits existiert:
+ALTER TABLE posts ADD COLUMN IF NOT EXISTS view_count INTEGER DEFAULT 0;
+ALTER TABLE posts ADD COLUMN IF NOT EXISTS seo_title TEXT;
+ALTER TABLE posts ADD COLUMN IF NOT EXISTS seo_description TEXT;
+ALTER TABLE posts ADD COLUMN IF NOT EXISTS seo_keywords TEXT;
+
+-- 8. Policy: Erlaubt das Erhoehen des View-Counts fuer alle
+CREATE POLICY "Jeder kann Views erhoehen" ON posts
+  FOR UPDATE USING (true)
+  WITH CHECK (true);

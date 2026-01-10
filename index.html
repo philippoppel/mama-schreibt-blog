@@ -927,6 +927,367 @@
     /* Hidden */
     .hidden { display: none !important; }
 
+    /* Dashboard Styles */
+    .dashboard {
+      display: none;
+      padding: 40px 0;
+      background: var(--cream-dark);
+    }
+
+    .dashboard.active { display: block; }
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .dashboard-header h2 { margin: 0; font-size: 32px; }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .stat-card {
+      background: var(--white);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--rosa-dark);
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--taupe);
+      margin-top: 4px;
+    }
+
+    .posts-table-wrapper {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .posts-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--blush);
+    }
+
+    .posts-tab {
+      padding: 16px 24px;
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--taupe);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .posts-tab:hover { color: var(--rosa-dark); }
+    .posts-tab.active {
+      color: var(--rosa-dark);
+      border-bottom-color: var(--rosa);
+    }
+
+    .posts-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .posts-table th,
+    .posts-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--blush);
+    }
+
+    .posts-table th {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--taupe);
+      background: var(--cream);
+    }
+
+    .posts-table tr:hover { background: var(--cream); }
+
+    .posts-table td:first-child { max-width: 300px; }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status-published {
+      background: var(--success);
+      color: var(--white);
+    }
+
+    .status-draft {
+      background: var(--blush);
+      color: var(--rosa-dark);
+    }
+
+    .table-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* Chart */
+    .chart-container {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-top: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .chart-title {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: var(--charcoal);
+    }
+
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      height: 200px;
+      gap: 12px;
+      padding: 20px 0 30px;
+    }
+
+    .bar-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 40px;
+      max-width: 80px;
+    }
+
+    .bar {
+      width: 100%;
+      background: linear-gradient(180deg, var(--rosa) 0%, var(--rosa-dark) 100%);
+      border-radius: 4px 4px 0 0;
+      transition: height 0.3s ease;
+      min-height: 4px;
+    }
+
+    .bar-value {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .bar-label {
+      font-size: 10px;
+      color: var(--taupe);
+      margin-top: 8px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 70px;
+    }
+
+    /* SEO Section in Editor */
+    .seo-section {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--blush);
+    }
+
+    .seo-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      cursor: pointer;
+    }
+
+    .seo-header h4 { margin: 0; color: var(--charcoal); }
+
+    .seo-toggle {
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      color: var(--taupe);
+      transition: transform 0.3s;
+    }
+
+    .seo-toggle.expanded { transform: rotate(180deg); }
+
+    .seo-content {
+      display: none;
+    }
+
+    .seo-content.expanded { display: block; }
+
+    .seo-preview {
+      background: var(--white);
+      border: 1px solid var(--blush);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      margin-top: 16px;
+    }
+
+    .seo-preview-label {
+      font-size: 12px;
+      color: var(--taupe);
+      margin-bottom: 8px;
+    }
+
+    .seo-preview-title {
+      color: #1a0dab;
+      font-size: 18px;
+      margin-bottom: 4px;
+      font-family: Arial, sans-serif;
+    }
+
+    .seo-preview-url {
+      color: #006621;
+      font-size: 13px;
+      margin-bottom: 4px;
+      font-family: Arial, sans-serif;
+    }
+
+    .seo-preview-desc {
+      color: #545454;
+      font-size: 14px;
+      line-height: 1.5;
+      font-family: Arial, sans-serif;
+    }
+
+    .char-counter {
+      font-size: 12px;
+      color: var(--taupe);
+      text-align: right;
+      margin-top: 4px;
+    }
+
+    .char-counter.warning { color: #e67e22; }
+    .char-counter.error { color: var(--error); }
+
+    .ai-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .ai-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .ai-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .ai-btn-small {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    .seo-suggestions {
+      margin-top: 16px;
+      padding: 16px;
+      background: var(--cream);
+      border-radius: var(--radius-sm);
+    }
+
+    .seo-score {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .seo-score-good { color: var(--success); }
+    .seo-score-medium { color: #e67e22; }
+    .seo-score-bad { color: var(--error); }
+
+    .field-with-ai {
+      position: relative;
+    }
+
+    .field-ai-btn {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .field-ai-btn:hover { opacity: 0.9; }
+
+    /* Responsive Dashboard */
+    @media (max-width: 1024px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .posts-table th:nth-child(4),
+      .posts-table td:nth-child(4),
+      .posts-table th:nth-child(5),
+      .posts-table td:nth-child(5) {
+        display: none;
+      }
+
+      .dashboard-header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
     /* Responsive */
     @media (max-width: 1024px) {
       .hero-inner, .about-inner, .featured-card {
@@ -968,12 +1329,77 @@
       <div class="admin-bar-inner">
         <span>Eingeloggt als <strong>Babsi</strong></span>
         <div class="admin-bar-actions">
+          <button class="btn btn-small btn-ghost" onclick="toggleDashboard()">Dashboard</button>
           <button class="btn btn-small btn-primary" onclick="openEditor()">+ Neuer Beitrag</button>
           <button class="btn btn-small btn-ghost" onclick="logout()">Ausloggen</button>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Dashboard (nur sichtbar wenn eingeloggt) -->
+  <section class="dashboard" id="dashboard">
+    <div class="container">
+      <div class="dashboard-header">
+        <h2>Dashboard</h2>
+        <button class="btn btn-primary" onclick="openEditor()">+ Neuer Beitrag</button>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="statTotal">0</div>
+          <div class="stat-label">Beitraege gesamt</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statPublished">0</div>
+          <div class="stat-label">Veroeffentlicht</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statDrafts">0</div>
+          <div class="stat-label">Entwuerfe</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statViews">0</div>
+          <div class="stat-label">Aufrufe gesamt</div>
+        </div>
+      </div>
+
+      <!-- Posts Table -->
+      <div class="posts-table-wrapper">
+        <div class="posts-tabs">
+          <button class="posts-tab active" data-filter="all" onclick="setDashboardFilter('all')">Alle</button>
+          <button class="posts-tab" data-filter="published" onclick="setDashboardFilter('published')">Veroeffentlicht</button>
+          <button class="posts-tab" data-filter="draft" onclick="setDashboardFilter('draft')">Entwuerfe</button>
+        </div>
+        <table class="posts-table">
+          <thead>
+            <tr>
+              <th>Titel</th>
+              <th>Kategorie</th>
+              <th>Status</th>
+              <th>Aufrufe</th>
+              <th>Geaendert</th>
+              <th>Aktionen</th>
+            </tr>
+          </thead>
+          <tbody id="postsTableBody">
+            <tr>
+              <td colspan="6" style="text-align: center; padding: 40px; color: var(--taupe);">Lade...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Views Chart -->
+      <div class="chart-container">
+        <h3 class="chart-title">Aufrufe nach Beitrag</h3>
+        <div id="viewsChart" class="bar-chart">
+          <p style="text-align: center; color: var(--taupe); width: 100%;">Lade Statistiken...</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Header -->
   <header class="header">
@@ -1271,9 +1697,59 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
             <input type="checkbox" id="postFeatured"> Als Featured-Beitrag markieren
           </label>
         </div>
+
+        <!-- SEO Section -->
+        <div class="seo-section">
+          <div class="seo-header" onclick="toggleSeoSection()">
+            <h4>SEO-Einstellungen</h4>
+            <button type="button" class="seo-toggle" id="seoToggle">&#9660;</button>
+          </div>
+
+          <div class="seo-content" id="seoContent">
+            <div style="margin-bottom: 20px;">
+              <button type="button" class="ai-btn" id="generateSeoBtn" onclick="generateSEO()">
+                &#10024; KI SEO generieren
+              </button>
+              <span style="font-size: 12px; color: var(--taupe); margin-left: 12px;">Powered by Groq AI</span>
+            </div>
+
+            <div class="form-group">
+              <label for="seoTitle">SEO Titel</label>
+              <div class="field-with-ai">
+                <input type="text" id="seoTitle" placeholder="SEO-optimierter Titel (max 60 Zeichen)" oninput="updateCharCounter('seoTitle', 60); updateSeoPreview();">
+              </div>
+              <div class="char-counter" id="seoTitleCounter">0/60</div>
+            </div>
+
+            <div class="form-group">
+              <label for="seoDescription">Meta-Beschreibung</label>
+              <div class="field-with-ai">
+                <textarea id="seoDescription" rows="2" placeholder="Meta-Beschreibung (max 155 Zeichen)" oninput="updateCharCounter('seoDescription', 155); updateSeoPreview();"></textarea>
+              </div>
+              <div class="char-counter" id="seoDescriptionCounter">0/155</div>
+            </div>
+
+            <div class="form-group">
+              <label for="seoKeywords">Keywords</label>
+              <input type="text" id="seoKeywords" placeholder="keyword1, keyword2, keyword3">
+            </div>
+
+            <!-- SEO Preview -->
+            <div class="seo-preview">
+              <p class="seo-preview-label">Google Vorschau:</p>
+              <div class="seo-preview-title" id="seoPreviewTitle">Dein Titel erscheint hier</div>
+              <div class="seo-preview-url">mama-schreibt-blog.com/beitrag/...</div>
+              <div class="seo-preview-desc" id="seoPreviewDesc">Deine Meta-Beschreibung erscheint hier...</div>
+            </div>
+
+            <!-- SEO Suggestions -->
+            <div id="seoSuggestions"></div>
+          </div>
+        </div>
+
         <div class="form-actions">
           <button type="button" class="btn btn-outline" onclick="saveAsDraft()">Als Entwurf speichern</button>
-          <button type="submit" class="btn btn-primary">Veröffentlichen</button>
+          <button type="submit" class="btn btn-primary">Veroeffentlichen</button>
         </div>
       </form>
     </div>
@@ -1295,10 +1771,17 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
     const SUPABASE_URL = 'https://aygsockcaepagzxzbrcx.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5Z3NvY2tjYWVwYWd6eHpicmN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5ODU2MzAsImV4cCI6MjA4MzU2MTYzMH0.s7t8a_12OAqh4NDvIk6WoiWyOKPXwZ6EXY_Q53fDtNk';
 
+    // API Endpoint (Vercel Serverless Function)
+    const SEO_API_URL = '/api/generate-seo';
+
     let db;
     let currentUser = null;
     let allPosts = [];
     let currentFilter = null;
+
+    // Dashboard State
+    let dashboardPosts = [];
+    let dashboardFilter = 'all';
 
     // Initialize
     document.addEventListener('DOMContentLoaded', async () => {
@@ -1418,8 +1901,11 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
     }
 
     function openPost(id) {
-      const post = allPosts.find(p => p.id === id);
+      const post = allPosts.find(p => p.id === id) || dashboardPosts.find(p => p.id === id);
       if (!post) return;
+
+      // Track view
+      trackView(id);
 
       const content = post.content.split('\n\n').map(p => `<p>${p}</p>`).join('');
 
@@ -1491,8 +1977,13 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
 
     // Post functions
     function openEditor(postId = null) {
+      // Reset SEO section
+      document.getElementById('seoContent').classList.remove('expanded');
+      document.getElementById('seoToggle').classList.remove('expanded');
+      document.getElementById('seoSuggestions').innerHTML = '';
+
       if (postId) {
-        const post = allPosts.find(p => p.id === postId);
+        const post = allPosts.find(p => p.id === postId) || dashboardPosts.find(p => p.id === postId);
         if (post) {
           document.getElementById('editorTitle').textContent = 'Beitrag bearbeiten';
           document.getElementById('postId').value = post.id;
@@ -1502,11 +1993,25 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
           document.getElementById('postImage').value = post.image_url || '';
           document.getElementById('postContent').value = post.content;
           document.getElementById('postFeatured').checked = post.featured;
+
+          // Load SEO fields
+          document.getElementById('seoTitle').value = post.seo_title || '';
+          document.getElementById('seoDescription').value = post.seo_description || '';
+          document.getElementById('seoKeywords').value = post.seo_keywords || '';
+          updateCharCounter('seoTitle', 60);
+          updateCharCounter('seoDescription', 155);
+          updateSeoPreview();
         }
       } else {
         document.getElementById('editorTitle').textContent = 'Neuer Beitrag';
         document.getElementById('postForm').reset();
         document.getElementById('postId').value = '';
+        document.getElementById('seoTitle').value = '';
+        document.getElementById('seoDescription').value = '';
+        document.getElementById('seoKeywords').value = '';
+        updateCharCounter('seoTitle', 60);
+        updateCharCounter('seoDescription', 155);
+        updateSeoPreview();
       }
       openModal('editorModal');
     }
@@ -1527,7 +2032,11 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
         content: document.getElementById('postContent').value,
         featured: document.getElementById('postFeatured').checked,
         published: published,
-        updated_at: new Date().toISOString()
+        updated_at: new Date().toISOString(),
+        // SEO fields
+        seo_title: document.getElementById('seoTitle').value || null,
+        seo_description: document.getElementById('seoDescription').value || null,
+        seo_keywords: document.getElementById('seoKeywords').value || null
       };
 
       const postId = document.getElementById('postId').value;
@@ -1542,9 +2051,10 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
 
         if (result.error) throw result.error;
 
-        showToast(published ? 'Beitrag veröffentlicht!' : 'Entwurf gespeichert!', 'success');
+        showToast(published ? 'Beitrag veroeffentlicht!' : 'Entwurf gespeichert!', 'success');
         closeModal('editorModal');
         await loadPosts();
+        if (currentUser) await loadDashboardPosts();
       } catch (err) {
         showToast(err.message || 'Fehler beim Speichern', 'error');
       }
@@ -1643,6 +2153,341 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
           document.querySelectorAll('.modal.active').forEach(m => closeModal(m.id));
         }
       });
+    }
+
+    // ==========================================
+    // DASHBOARD FUNCTIONS
+    // ==========================================
+
+    async function loadDashboardPosts() {
+      if (!currentUser) return;
+
+      try {
+        const { data, error } = await db
+          .from('posts')
+          .select('*')
+          .order('updated_at', { ascending: false });
+
+        if (error) throw error;
+        dashboardPosts = data || [];
+        renderDashboard();
+      } catch (err) {
+        console.error('Error loading dashboard:', err);
+        showToast('Fehler beim Laden des Dashboards', 'error');
+      }
+    }
+
+    function renderDashboard() {
+      renderDashboardStats();
+      renderPostsTable();
+      renderViewsChart();
+    }
+
+    function renderDashboardStats() {
+      const total = dashboardPosts.length;
+      const published = dashboardPosts.filter(p => p.published).length;
+      const drafts = total - published;
+      const totalViews = dashboardPosts.reduce((sum, p) => sum + (p.view_count || 0), 0);
+
+      document.getElementById('statTotal').textContent = total;
+      document.getElementById('statPublished').textContent = published;
+      document.getElementById('statDrafts').textContent = drafts;
+      document.getElementById('statViews').textContent = totalViews.toLocaleString('de-DE');
+    }
+
+    function renderPostsTable() {
+      let posts = dashboardPosts;
+
+      if (dashboardFilter === 'published') {
+        posts = posts.filter(p => p.published);
+      } else if (dashboardFilter === 'draft') {
+        posts = posts.filter(p => !p.published);
+      }
+
+      const tbody = document.getElementById('postsTableBody');
+
+      if (posts.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="6" style="text-align: center; color: var(--taupe); padding: 40px;">
+              Keine Beitraege gefunden.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = posts.map(post => `
+        <tr>
+          <td>
+            <strong>${escapeHtml(post.title)}</strong>
+            ${post.featured ? ' <span style="color: var(--rosa);">&#9733;</span>' : ''}
+          </td>
+          <td>${escapeHtml(post.category)}</td>
+          <td>
+            <span class="status-badge ${post.published ? 'status-published' : 'status-draft'}">
+              ${post.published ? 'Online' : 'Entwurf'}
+            </span>
+          </td>
+          <td>${(post.view_count || 0).toLocaleString('de-DE')}</td>
+          <td>${formatDate(post.updated_at || post.created_at)}</td>
+          <td>
+            <div class="table-actions">
+              <button class="btn btn-small btn-ghost" onclick="editPost('${post.id}')">Bearbeiten</button>
+              ${!post.published ? `
+                <button class="btn btn-small btn-success" onclick="quickPublish('${post.id}')">Online</button>
+              ` : `
+                <button class="btn btn-small btn-outline" onclick="unpublishPost('${post.id}')">Offline</button>
+              `}
+              <button class="btn btn-small btn-danger" onclick="deletePostFromDashboard('${post.id}')">X</button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function renderViewsChart() {
+      const chartContainer = document.getElementById('viewsChart');
+      const postsWithViews = dashboardPosts
+        .filter(p => p.published)
+        .sort((a, b) => (b.view_count || 0) - (a.view_count || 0))
+        .slice(0, 8);
+
+      if (postsWithViews.length === 0) {
+        chartContainer.innerHTML = '<p style="text-align: center; color: var(--taupe); width: 100%;">Noch keine Daten verfuegbar</p>';
+        return;
+      }
+
+      const maxViews = Math.max(...postsWithViews.map(p => p.view_count || 1), 1);
+
+      chartContainer.innerHTML = postsWithViews.map(post => {
+        const height = Math.max(20, ((post.view_count || 0) / maxViews) * 150);
+        return `
+          <div class="bar-item" title="${escapeHtml(post.title)}">
+            <span class="bar-value">${post.view_count || 0}</span>
+            <div class="bar" style="height: ${height}px;"></div>
+            <span class="bar-label">${escapeHtml(post.title.substring(0, 12))}...</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function setDashboardFilter(filter) {
+      dashboardFilter = filter;
+      document.querySelectorAll('.posts-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.filter === filter);
+      });
+      renderPostsTable();
+    }
+
+    function toggleDashboard() {
+      const dashboard = document.getElementById('dashboard');
+      const isVisible = dashboard.classList.contains('active');
+
+      if (isVisible) {
+        dashboard.classList.remove('active');
+      } else {
+        dashboard.classList.add('active');
+        loadDashboardPosts();
+      }
+    }
+
+    async function quickPublish(id) {
+      try {
+        const { error } = await db
+          .from('posts')
+          .update({ published: true, updated_at: new Date().toISOString() })
+          .eq('id', id);
+
+        if (error) throw error;
+        showToast('Beitrag veroeffentlicht!', 'success');
+        await loadDashboardPosts();
+        await loadPosts();
+      } catch (err) {
+        showToast('Fehler beim Veroeffentlichen', 'error');
+      }
+    }
+
+    async function unpublishPost(id) {
+      if (!confirm('Beitrag offline nehmen?')) return;
+
+      try {
+        const { error } = await db
+          .from('posts')
+          .update({ published: false, updated_at: new Date().toISOString() })
+          .eq('id', id);
+
+        if (error) throw error;
+        showToast('Beitrag offline genommen', 'success');
+        await loadDashboardPosts();
+        await loadPosts();
+      } catch (err) {
+        showToast('Fehler', 'error');
+      }
+    }
+
+    async function deletePostFromDashboard(id) {
+      if (!confirm('Beitrag wirklich loeschen?')) return;
+
+      try {
+        const { error } = await db.from('posts').delete().eq('id', id);
+        if (error) throw error;
+
+        showToast('Beitrag geloescht', 'success');
+        await loadDashboardPosts();
+        await loadPosts();
+      } catch (err) {
+        showToast(err.message || 'Fehler beim Loeschen', 'error');
+      }
+    }
+
+    // ==========================================
+    // VIEW TRACKING
+    // ==========================================
+
+    async function trackView(postId) {
+      try {
+        // Get current view count
+        const { data: post } = await db
+          .from('posts')
+          .select('view_count')
+          .eq('id', postId)
+          .single();
+
+        const newCount = (post?.view_count || 0) + 1;
+
+        // Update view count
+        await db
+          .from('posts')
+          .update({ view_count: newCount })
+          .eq('id', postId);
+      } catch (err) {
+        console.error('View tracking error:', err);
+        // Silent fail - don't disrupt user experience
+      }
+    }
+
+    // ==========================================
+    // SEO FUNCTIONS
+    // ==========================================
+
+    function toggleSeoSection() {
+      const content = document.getElementById('seoContent');
+      const toggle = document.getElementById('seoToggle');
+      content.classList.toggle('expanded');
+      toggle.classList.toggle('expanded');
+    }
+
+    function updateSeoPreview() {
+      const title = document.getElementById('seoTitle').value || document.getElementById('postTitle').value || 'Dein Titel erscheint hier';
+      const description = document.getElementById('seoDescription').value || document.getElementById('postExcerpt').value || 'Deine Meta-Beschreibung erscheint hier...';
+
+      document.getElementById('seoPreviewTitle').textContent = title.substring(0, 60);
+      document.getElementById('seoPreviewDesc').textContent = description.substring(0, 155);
+    }
+
+    function updateCharCounter(fieldId, maxLength) {
+      const field = document.getElementById(fieldId);
+      const counter = document.getElementById(fieldId + 'Counter');
+      if (!field || !counter) return;
+
+      const length = field.value.length;
+      counter.textContent = `${length}/${maxLength}`;
+      counter.className = 'char-counter';
+
+      if (length > maxLength) {
+        counter.classList.add('error');
+      } else if (length > maxLength * 0.9) {
+        counter.classList.add('warning');
+      }
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ==========================================
+    // GROQ AI SEO GENERATION
+    // ==========================================
+
+    async function generateSEO() {
+      const title = document.getElementById('postTitle').value;
+      const content = document.getElementById('postContent').value;
+
+      if (!title || !content) {
+        showToast('Bitte Titel und Inhalt eingeben', 'error');
+        return;
+      }
+
+      const generateBtn = document.getElementById('generateSeoBtn');
+      generateBtn.disabled = true;
+      generateBtn.innerHTML = '<span class="loading-spinner" style="width: 16px; height: 16px; display: inline-block;"></span> Generiere...';
+
+      try {
+        const response = await fetch(SEO_API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ title, content })
+        });
+
+        if (!response.ok) {
+          throw new Error('API request failed');
+        }
+
+        const seoData = await response.json();
+
+        if (seoData.error) {
+          throw new Error(seoData.error);
+        }
+
+        // Fill in SEO fields
+        document.getElementById('seoTitle').value = seoData.seo_title || '';
+        document.getElementById('seoDescription').value = seoData.seo_description || '';
+        document.getElementById('seoKeywords').value = seoData.seo_keywords || '';
+
+        // Update character counters
+        updateCharCounter('seoTitle', 60);
+        updateCharCounter('seoDescription', 155);
+
+        // Update preview
+        updateSeoPreview();
+
+        // Show suggestions
+        if (seoData.suggestions && seoData.suggestions.length > 0) {
+          showSeoSuggestions(seoData);
+        }
+
+        showToast('SEO-Daten generiert!', 'success');
+      } catch (err) {
+        console.error('SEO generation error:', err);
+        showToast('Fehler bei der SEO-Generierung', 'error');
+      } finally {
+        generateBtn.disabled = false;
+        generateBtn.innerHTML = '&#10024; KI SEO generieren';
+      }
+    }
+
+    function showSeoSuggestions(seoData) {
+      const scoreClass = seoData.seo_score >= 70 ? 'seo-score-good' : seoData.seo_score >= 50 ? 'seo-score-medium' : 'seo-score-bad';
+
+      document.getElementById('seoSuggestions').innerHTML = `
+        <div class="seo-suggestions">
+          <div class="seo-score ${scoreClass}">
+            SEO Score: ${seoData.seo_score}/100
+          </div>
+          ${seoData.suggestions && seoData.suggestions.length > 0 ? `
+            <p style="font-weight: 600; margin-bottom: 8px;">Verbesserungsvorschlaege:</p>
+            <ul style="margin-left: 20px; color: var(--taupe);">
+              ${seoData.suggestions.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
+            </ul>
+          ` : ''}
+        </div>
+      `;
     }
   </script>
 
