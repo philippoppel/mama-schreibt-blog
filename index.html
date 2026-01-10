@@ -1237,6 +1237,337 @@
 
     .field-ai-btn:hover { opacity: 0.9; }
 
+    /* Search Bar */
+    .search-container {
+      position: relative;
+      margin: 0 20px;
+    }
+
+    .search-input {
+      padding: 10px 16px 10px 40px;
+      border: 2px solid var(--blush);
+      border-radius: 50px;
+      font-size: 14px;
+      width: 200px;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      background: var(--white);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--rosa);
+      width: 280px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--taupe);
+      font-size: 14px;
+    }
+
+    .search-results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-lg);
+      max-height: 400px;
+      overflow-y: auto;
+      z-index: 200;
+      display: none;
+    }
+
+    .search-results.active {
+      display: block;
+    }
+
+    .search-result-item {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--blush);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .search-result-item:hover {
+      background: var(--cream);
+    }
+
+    .search-result-item:last-child {
+      border-bottom: none;
+    }
+
+    .search-result-title {
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .search-result-excerpt {
+      font-size: 13px;
+      color: var(--taupe);
+    }
+
+    .search-result-category {
+      font-size: 11px;
+      color: var(--rosa-dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .search-no-results {
+      padding: 20px;
+      text-align: center;
+      color: var(--taupe);
+    }
+
+    /* Beliebte Beitraege Section */
+    .popular-posts {
+      padding: 60px 0;
+      background: var(--cream-dark);
+    }
+
+    .popular-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .popular-card {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--rosa);
+    }
+
+    .popular-card:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .popular-rank {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 32px;
+      color: var(--blush);
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .popular-card h4 {
+      font-size: 16px;
+      margin: 8px 0;
+      line-height: 1.4;
+    }
+
+    .popular-views {
+      font-size: 12px;
+      color: var(--taupe);
+    }
+
+    /* Schnellhilfe / Notfall Section */
+    .emergency-help {
+      padding: 50px 0;
+      background: linear-gradient(135deg, var(--rosa) 0%, var(--rosa-dark) 100%);
+      color: var(--white);
+    }
+
+    .emergency-inner {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .emergency-help h2 {
+      color: var(--white);
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .emergency-help p {
+      opacity: 0.9;
+      margin-bottom: 24px;
+      font-size: 18px;
+    }
+
+    .emergency-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .emergency-link {
+      background: rgba(255,255,255,0.2);
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .emergency-link:hover {
+      background: var(--white);
+      color: var(--rosa-dark);
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--rosa);
+      transform: translateY(-3px);
+    }
+
+    /* Verwandte Artikel */
+    .related-posts {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--blush);
+    }
+
+    .related-posts h4 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: var(--charcoal);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .related-card {
+      display: flex;
+      gap: 12px;
+      padding: 12px;
+      background: var(--cream);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+      background: var(--blush);
+    }
+
+    .related-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .related-info h5 {
+      font-size: 14px;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .related-info span {
+      font-size: 12px;
+      color: var(--taupe);
+    }
+
+    /* About Gallery */
+    .about-gallery img {
+      transition: transform 0.4s ease;
+    }
+
+    .about-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .about-gallery > div:last-child {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    /* Silhouette Banner Responsive */
+    @media (max-width: 900px) {
+      .silhouette-banner {
+        flex-direction: column !important;
+        gap: 0 !important;
+      }
+      .silhouette-banner img {
+        height: 200px !important;
+        width: 100% !important;
+      }
+    }
+
+    /* Contact Section in Footer */
+    .footer-contact {
+      margin-top: 20px;
+    }
+
+    .footer-contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--rosa);
+      color: var(--white);
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .footer-contact a:hover {
+      background: var(--rosa-dark);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 1024px) {
+      .popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .search-container {
+        display: none;
+      }
+
+      .popular-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .emergency-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
     /* Responsive Dashboard */
     @media (max-width: 1024px) {
       .stats-grid {
@@ -1587,6 +1918,12 @@
           <a href="#ueber-mich">Über mich</a>
           <a href="#themen">Themen</a>
           <a href="#blog">Blog</a>
+          <!-- Search -->
+          <div class="search-container">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" class="search-input" id="searchInput" placeholder="Suchen..." autocomplete="off">
+            <div class="search-results" id="searchResults"></div>
+          </div>
           <!-- Login Button (für nicht eingeloggte Benutzer) -->
           <button class="btn btn-ghost" id="loginBtn">Anmelden</button>
           <!-- Admin Nav Group (für eingeloggte Benutzer) -->
@@ -1626,7 +1963,7 @@
                 <path d="M26 22l4 10m4-10l-4 10" stroke="#e8a0a8" stroke-width="3" stroke-linecap="round"/>
               </svg>
             </span>
-            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?auto=format&fit=crop&w=800&q=80" alt="Mama mit Baby">
+            <img src="images/hero.jpg" alt="Babsi - Mama schreibt Blog">
             <div class="hero-badge">
               <strong>Von Herzen</strong>
               Echte Erfahrungen, keine perfekte Mama-Welt
@@ -1654,20 +1991,47 @@
       <div class="container">
         <div class="about-inner">
           <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=700&q=80" alt="Babsi">
+            <img src="images/mama-kind.jpg" alt="Babsi mit ihrem Sohn">
           </div>
           <div class="about-content">
             <h2>Schön, dass du hier bist</h2>
             <p>
-              Ich bin Babsi, Mama eines wunderbaren Sohnes, und ich kenne das Gefühl: Man hat tausend Fragen, liest sich durch unzählige Artikel und am Ende ist man noch verwirrter als vorher.
+              Ich bin Babsi, <strong>32 Jahre alt</strong>, verheiratet, und Mama eines wunderbaren Sohnes (18 Monate). Ich arbeite in Teilzeit als Grafikerin und jongliere jeden Tag zwischen Arbeit, Haushalt und Mamasein.
             </p>
             <p>
-              Hier schreibe ich über die Dinge, über die man nicht immer spricht. Über <strong>Langzeitstillen</strong> und warum ich mich nicht rechtfertige. Über <strong>aufdringliche Familienmitglieder</strong> und wie ich gelernt habe, Grenzen zu setzen.
+              Ich kenne das Gefühl: Man hat tausend Fragen, liest sich durch unzählige Artikel und am Ende ist man noch verwirrter als vorher. Oder noch schlimmer - man fühlt sich wie eine schlechte Mutter.
             </p>
             <p>
-              Ich bin keine Expertin - nur eine Mama, die ihre Erfahrungen teilt.
+              Hier schreibe ich über die Dinge, über die man nicht immer spricht. Über <strong>Langzeitstillen</strong> und warum ich mich nicht rechtfertige. Über <strong>aufdringliche Familienmitglieder</strong> und wie ich gelernt habe, Grenzen zu setzen. Über die Nächte, in denen ich heulend auf dem Boden saß, und die Momente, die alles wert machen.
+            </p>
+            <p>
+              Ich bin keine Expertin - nur eine Mama, die ihre ehrlichen Erfahrungen teilt. Keine Filter, keine perfekte Mama-Welt.
             </p>
             <p class="about-signature">Deine Babsi</p>
+            <div style="margin-top: 20px; display: flex; gap: 16px; flex-wrap: wrap;">
+              <span style="background: var(--blush); padding: 6px 14px; border-radius: 50px; font-size: 13px;">Stille seit 18 Monaten</span>
+              <span style="background: var(--blush); padding: 6px 14px; border-radius: 50px; font-size: 13px;">Teilzeit-Mama</span>
+              <span style="background: var(--blush); padding: 6px 14px; border-radius: 50px; font-size: 13px;">Kaffee-süchtig</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto-Galerie -->
+        <div class="about-gallery" style="margin-top: 60px;">
+          <h3 style="text-align: center; font-size: 28px; margin-bottom: 30px;">Einblicke in unser Leben</h3>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+            <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 3/4;">
+              <img src="images/paar-weiss.jpg" alt="Babsi und ihr Mann" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 3/4;">
+              <img src="images/paar-rosa.jpg" alt="Babsi und ihr Mann" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 3/4;">
+              <img src="images/silhouette.jpg" alt="Schwangerschafts-Silhouette" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 3/4;">
+              <img src="images/babyparty.jpg" alt="Babyparty mit Freundinnen" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
           </div>
         </div>
       </div>
@@ -1701,6 +2065,49 @@
             <div class="topic-icon">&#x2615;</div>
             <h3>Mama-Alltag</h3>
             <p>Kaffee, Selbstfürsorge, die ehrliche Realität</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Silhouette Banner -->
+    <section class="silhouette-banner" style="padding: 0; background: var(--charcoal); display: flex; align-items: center; justify-content: center; gap: 40px; overflow: hidden;">
+      <img src="images/silhouette-paar.jpg" alt="" style="height: 300px; width: auto; object-fit: cover; opacity: 0.9;">
+      <div style="text-align: center; color: var(--white); padding: 40px 20px;">
+        <p style="font-family: 'Dancing Script', cursive; font-size: 28px; color: var(--rosa); margin-bottom: 8px;">Gemeinsam durch alles</p>
+        <p style="font-size: 16px; opacity: 0.8; max-width: 400px;">Schwangerschaft, Geburt, Elternsein - mit meinem Mann an meiner Seite</p>
+      </div>
+      <img src="images/silhouette.jpg" alt="" style="height: 300px; width: auto; object-fit: cover; opacity: 0.9;">
+    </section>
+
+    <!-- Schnellhilfe fuer Nacht-Mamas -->
+    <section class="emergency-help">
+      <div class="container">
+        <div class="emergency-inner">
+          <h2>Gerade verzweifelt? Du bist nicht allein.</h2>
+          <p>Es ist mitten in der Nacht, du bist erschöpft und googlest nach Antworten. Hier findest du schnelle Hilfe:</p>
+          <div class="emergency-links">
+            <a class="emergency-link" onclick="searchAndScroll('schlaeft nicht')">Baby schläft nicht</a>
+            <a class="emergency-link" onclick="searchAndScroll('stillen nachts')">Stillen in der Nacht</a>
+            <a class="emergency-link" onclick="searchAndScroll('allein')">Ich fühle mich allein</a>
+            <a class="emergency-link" onclick="searchAndScroll('normal')">Ist das normal?</a>
+            <a class="emergency-link" onclick="searchAndScroll('überfordert')">Ich bin überfordert</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beliebte Beitraege -->
+    <section class="popular-posts" id="popularSection">
+      <div class="container">
+        <div class="section-header">
+          <h2>Beliebteste Beiträge</h2>
+          <p>Das lesen andere Mamas am häufigsten</p>
+        </div>
+        <div class="popular-grid" id="popularGrid">
+          <div class="loading">
+            <div class="loading-spinner"></div>
+            Lade beliebte Beiträge...
           </div>
         </div>
       </div>
@@ -1751,11 +2158,13 @@
             </svg>
           </span>
           <h2>Bleib in Kontakt</h2>
-          <p>Neue Beiträge direkt in dein Postfach. Kein Spam, versprochen.</p>
+          <p style="margin-bottom: 8px;">Bekomme <strong>jeden Sonntag</strong> meinen neuen Beitrag direkt in dein Postfach.</p>
+          <p style="font-size: 14px; color: var(--taupe); margin-bottom: 24px;">Ehrliche Mama-Geschichten, praktische Tipps, und das Gefühl: Du bist nicht allein. Kein Spam - nur ich, einmal pro Woche.</p>
           <form class="newsletter-form">
             <input type="email" placeholder="Deine E-Mail-Adresse" required>
-            <button type="submit">Anmelden</button>
+            <button type="submit">Dabei sein</button>
           </form>
+          <p style="font-size: 12px; color: var(--taupe); margin-top: 16px;">Bereits <strong>247 Mamas</strong> lesen mit. Jederzeit abmelden möglich.</p>
         </div>
       </div>
     </section>
@@ -1771,6 +2180,11 @@
             <span class="logo-tagline">Mama schreibt Blog</span>
           </div>
           <p>Ehrliche Geschichten und Erfahrungen aus meinem Mama-Alltag. Von Herzen, für dich.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram">&#128247;</a>
+            <a href="https://pinterest.com" target="_blank" class="social-link" title="Pinterest">&#128204;</a>
+            <a href="https://facebook.com" target="_blank" class="social-link" title="Facebook">&#128101;</a>
+          </div>
         </div>
         <div class="footer-links">
           <h4>Blog</h4>
@@ -1780,10 +2194,13 @@
           <a href="#" data-filter="Mama-Alltag">Mama-Alltag</a>
         </div>
         <div class="footer-links">
-          <h4>Rechtliches</h4>
+          <h4>Kontakt & Mehr</h4>
+          <a href="mailto:hallo@mama-schreibt-blog.com">hallo@mama-schreibt-blog.com</a>
           <a href="#">Impressum</a>
           <a href="#">Datenschutz</a>
-          <a href="#">Kontakt</a>
+          <div class="footer-contact">
+            <a href="mailto:hallo@mama-schreibt-blog.com">&#9993; Schreib mir</a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
@@ -2057,6 +2474,12 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
       // Setup event listeners
       setupEventListeners();
 
+      // Initialize Search
+      initSearch();
+
+      // Render popular posts
+      renderPopularPosts();
+
       // Initialize View Mode Router
       initViewModeRouter();
     });
@@ -2074,6 +2497,7 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
         allPosts = data || [];
         renderFeaturedPost();
         renderBlogPosts();
+        renderPopularPosts();
       } catch (err) {
         console.error('Error loading posts:', err);
         document.getElementById('blogGrid').innerHTML = `
@@ -2174,6 +2598,7 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
             <button class="btn btn-small btn-danger" onclick="deletePost('${post.id}')">Löschen</button>
           </div>
         ` : ''}
+        ${renderRelatedPosts(post)}
       `;
 
       openModal('postModal');
@@ -2736,6 +3161,136 @@ Du kannst Absätze durch Leerzeilen trennen." required></textarea>
               ${seoData.suggestions.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
             </ul>
           ` : ''}
+        </div>
+      `;
+    }
+
+    // ==========================================
+    // SEARCH FUNCTIONALITY
+    // ==========================================
+
+    function initSearch() {
+      const searchInput = document.getElementById('searchInput');
+      const searchResults = document.getElementById('searchResults');
+
+      if (!searchInput) return;
+
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+
+        if (query.length < 2) {
+          searchResults.classList.remove('active');
+          return;
+        }
+
+        const results = allPosts.filter(post => {
+          const titleMatch = post.title.toLowerCase().includes(query);
+          const contentMatch = post.content.toLowerCase().includes(query);
+          const categoryMatch = post.category.toLowerCase().includes(query);
+          return titleMatch || contentMatch || categoryMatch;
+        }).slice(0, 5);
+
+        if (results.length === 0) {
+          searchResults.innerHTML = '<div class="search-no-results">Keine Ergebnisse gefunden</div>';
+        } else {
+          searchResults.innerHTML = results.map(post => `
+            <div class="search-result-item" onclick="openPostFromSearch('${post.id}')">
+              <div class="search-result-category">${post.category}</div>
+              <div class="search-result-title">${highlightMatch(post.title, query)}</div>
+              <div class="search-result-excerpt">${post.excerpt || post.content.substring(0, 80)}...</div>
+            </div>
+          `).join('');
+        }
+
+        searchResults.classList.add('active');
+      });
+
+      // Close search results when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-container')) {
+          searchResults.classList.remove('active');
+        }
+      });
+    }
+
+    function highlightMatch(text, query) {
+      const regex = new RegExp(`(${query})`, 'gi');
+      return text.replace(regex, '<strong style="color: var(--rosa-dark);">$1</strong>');
+    }
+
+    function openPostFromSearch(id) {
+      document.getElementById('searchResults').classList.remove('active');
+      document.getElementById('searchInput').value = '';
+      openPost(id);
+    }
+
+    function searchAndScroll(query) {
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) {
+        searchInput.value = query;
+        searchInput.dispatchEvent(new Event('input'));
+        searchInput.focus();
+      }
+      document.getElementById('blog').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ==========================================
+    // POPULAR POSTS
+    // ==========================================
+
+    function renderPopularPosts() {
+      const popularGrid = document.getElementById('popularGrid');
+      if (!popularGrid) return;
+
+      const popularPosts = [...allPosts]
+        .sort((a, b) => (b.view_count || 0) - (a.view_count || 0))
+        .slice(0, 4);
+
+      if (popularPosts.length === 0) {
+        popularGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--taupe);">Noch keine beliebten Beitraege</p>';
+        return;
+      }
+
+      popularGrid.innerHTML = popularPosts.map((post, index) => `
+        <div class="popular-card" onclick="openPost('${post.id}')">
+          <div class="popular-rank">#${index + 1}</div>
+          <h4>${post.title}</h4>
+          <div class="popular-views">${(post.view_count || 0).toLocaleString('de-DE')} Aufrufe</div>
+        </div>
+      `).join('');
+    }
+
+    // ==========================================
+    // RELATED POSTS
+    // ==========================================
+
+    function getRelatedPosts(currentPost) {
+      return allPosts
+        .filter(p => p.id !== currentPost.id && p.category === currentPost.category)
+        .slice(0, 2);
+    }
+
+    function renderRelatedPosts(currentPost) {
+      const relatedPosts = getRelatedPosts(currentPost);
+
+      if (relatedPosts.length === 0) {
+        return '';
+      }
+
+      return `
+        <div class="related-posts">
+          <h4>Das könnte dich auch interessieren</h4>
+          <div class="related-grid">
+            ${relatedPosts.map(post => `
+              <div class="related-card" onclick="closeModal('postModal'); setTimeout(() => openPost('${post.id}'), 300);">
+                <img src="${post.image_url || 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=100&q=80'}" alt="${post.title}">
+                <div class="related-info">
+                  <h5>${post.title}</h5>
+                  <span>${post.category}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
         </div>
       `;
     }
