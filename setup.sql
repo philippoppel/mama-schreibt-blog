@@ -32,7 +32,7 @@ CREATE POLICY "Auth Users haben vollen Zugriff" ON posts
 INSERT INTO posts (title, content, excerpt, category, image_url, published, featured) VALUES
 (
   'Langzeitstillen - Warum ich mich nicht rechtfertige',
-  'Mein Sohn ist jetzt 18 Monate alt und wir stillen immer noch. Die Blicke, die Kommentare, die gut gemeinten Ratschlaege - ich kenne sie alle.
+  'Nico ist jetzt 2 Jahre alt und wir stillen immer noch. Die Blicke, die Kommentare, die gut gemeinten Ratschlaege - ich kenne sie alle.
 
 Als ich schwanger war, hatte ich mir vorgenommen: 6 Monate stillen, dann ist Schluss. So hatte ich es ueberall gelesen, so machten es die meisten. Aber dann kam alles anders.
 
@@ -45,7 +45,7 @@ Ja, er kann essen. Er isst auch. Aber er stillt auch noch. Und das ist okay. Das
 Ich habe aufgehoert, mich zu erklaeren. Wenn jemand fragt, sage ich einfach: "Das passt fuer uns so." Punkt. Keine Rechtfertigung, keine Diskussion.
 
 An alle Mamas die auch laenger stillen: Ihr macht das richtig. Hoert auf euer Gefuehl, nicht auf die Meinungen anderer.',
-  'Mein Sohn ist 18 Monate alt und wir stillen immer noch. Ueber Blicke, Kommentare und warum ich meinen Weg gehe.',
+  'Nico ist 2 Jahre alt und wir stillen immer noch. Ueber Blicke, Kommentare und warum ich meinen Weg gehe.',
   'Stillen',
   'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=900&q=80',
   true,
@@ -55,7 +55,7 @@ An alle Mamas die auch laenger stillen: Ihr macht das richtig. Hoert auf euer Ge
   'Wenn dein Baby dich beim Stillen tritt',
   'Kleine Fuesse, grosse Wirkung. Kennst du das auch? Du stillst ganz friedlich und WUMMS - ein Tritt in den Bauch, ans Kinn, oder noch schlimmer: direkt auf die andere Brust.
 
-Mein Sohn hat eine Phase, in der er beim Stillen turnt. Er dreht sich, er tritt, er zieht an allem was er greifen kann. Manchmal frage ich mich, ob er stillt oder Kung-Fu trainiert.
+Nico hat eine Phase, in der er beim Stillen turnt. Er dreht sich, er tritt, er zieht an allem was er greifen kann. Manchmal frage ich mich, ob er stillt oder Kung-Fu trainiert.
 
 Was mir hilft:
 - Eine Stillkette oder Kette zum Festhalten
@@ -99,7 +99,7 @@ Die kurze Antwort: Ja, du darfst Kaffee trinken. 2-3 Tassen pro Tag sind laut de
 
 Die laengere Antwort: Es kommt auf dein Baby an. Manche Babys reagieren empfindlich auf Koffein, andere merken gar nichts.
 
-Bei uns war es so: Am Anfang war mein Sohn nach meinem Kaffee unruhiger. Also habe ich reduziert. Jetzt mit 18 Monaten merkt er nichts mehr, und ich geniesse wieder meinen Morgenkaffee.
+Bei uns war es so: Am Anfang war Nico nach meinem Kaffee unruhiger. Also habe ich reduziert. Jetzt mit 2 Jahren merkt er nichts mehr, und ich geniesse wieder meinen Morgenkaffee.
 
 Meine Tipps:
 - Direkt nach dem Stillen Kaffee trinken (dann ist am meisten Zeit bis zum naechsten Mal)
@@ -144,7 +144,7 @@ Halt durch. Der Morgen kommt.',
 
 Ich habe so viele Artikel gelesen, die mir erklaert haben, warum das "schlecht" ist. Schlechte Schlafgewohnheiten. Unselbstaendigkeit. Blablabla.
 
-Weisst du was? Mein Sohn ist jetzt 18 Monate. Er hat an der Brust eingeschlafen, seit er geboren wurde. Und er entwickelt sich praechtig. Er ist gluecklich. Er ist sicher.
+Weisst du was? Nico ist jetzt 2 Jahre alt. Er hat an der Brust eingeschlafen, seit er geboren wurde. Und er entwickelt sich praechtig. Er ist gluecklich. Er ist sicher.
 
 Das Einschlafen an der Brust ist eine der natuerlichsten Sachen der Welt. Muttermilch enthaelt schlaffördernde Hormone. Dein Baby spuert deine Naehe, hoert deinen Herzschlag. Es fuehlt sich sicher.
 
@@ -163,7 +163,7 @@ Geniess diese Momente. Sie gehen schneller vorbei als du denkst.',
   'Ich liebe mein Kind, aber manchmal vermisse ich mein altes Leben',
   'Heute muss ich mal ehrlich sein. Richtig ehrlich.
 
-Ich liebe meinen Sohn. Mehr als alles auf der Welt. Aber manchmal, wenn er endlich schlaeft, sitze ich da und denke an frueher.
+Ich liebe Nico. Mehr als alles auf der Welt. Aber manchmal, wenn er endlich schlaeft, sitze ich da und denke an frueher.
 
 An Abende mit Freunden, spontan und unbeschwert. An durchgeschlafene Naechte. An Brunch am Wochenende. An Reisen ohne halben Hausrat. An Gespraeche, die nicht unterbrochen werden.
 
@@ -205,7 +205,7 @@ Du musst dich nicht verstecken.',
 ),
 (
   'Die erste Erkältung - Als ich dachte, die Welt geht unter',
-  'Mein Sohn war 4 Monate alt, als er das erste Mal krank wurde. Eine simple Erkaeltung. Verstopfte Nase, etwas Husten, leichtes Fieber.
+  'Nico war 4 Monate alt, als er das erste Mal krank wurde. Eine simple Erkaeltung. Verstopfte Nase, etwas Husten, leichtes Fieber.
 
 Ich habe fast die 112 gerufen.
 
@@ -221,7 +221,7 @@ Was ich damals gerne gewusst haette:
 
 Wann zum Arzt? Bei sehr hohem Fieber, Atemnot, wenn das Baby nicht trinkt, oder wenn dein Bauchgefuehl sagt: Etwas stimmt nicht.
 
-Die Erkaeltung ging vorbei. Mein Sohn hat sie wie ein Champion ueberstanden. Ich... naja, ich habe ueberlebt.',
+Die Erkaeltung ging vorbei. Nico hat sie wie ein Champion ueberstanden. Ich... naja, ich habe ueberlebt.',
   'Die Panik beim ersten kranken Baby - und was ich dabei gelernt habe.',
   'Mein Baby',
   'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=600&q=80',
@@ -255,7 +255,7 @@ Du bist genug. Genau so wie du bist.',
 ),
 (
   'Partner-Streit nach dem Baby - Was mir keiner gesagt hat',
-  'Bevor unser Sohn kam, waren wir das perfekte Paar. Danach? Haben wir uns gestritten wie nie zuvor.
+  'Bevor Nico kam, waren Philipp und ich das perfekte Paar. Danach? Haben wir uns gestritten wie nie zuvor.
 
 Ueber Windeln. Ueber Schlaf. Ueber wer mehr macht. Ueber wer mueder ist. Ueber absolut alles.
 
